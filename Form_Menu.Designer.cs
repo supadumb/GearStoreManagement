@@ -69,7 +69,7 @@ namespace Gear_Store
             this.panelTopBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTopBar.Location = new System.Drawing.Point(0, 0);
             this.panelTopBar.Name = "panelTopBar";
-            this.panelTopBar.Size = new System.Drawing.Size(1200, 35);
+            this.panelTopBar.Size = new System.Drawing.Size(1240, 35);
             this.panelTopBar.TabIndex = 1;
             this.panelTopBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTopBar_MouseDown);
             this.panelTopBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelTopBar_MouseMove);
@@ -81,7 +81,7 @@ namespace Gear_Store
             this.btn_Mini.FlatAppearance.BorderSize = 0;
             this.btn_Mini.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Mini.Image = ((System.Drawing.Image)(resources.GetObject("btn_Mini.Image")));
-            this.btn_Mini.Location = new System.Drawing.Point(1027, 0);
+            this.btn_Mini.Location = new System.Drawing.Point(1067, 0);
             this.btn_Mini.Name = "btn_Mini";
             this.btn_Mini.Size = new System.Drawing.Size(57, 35);
             this.btn_Mini.TabIndex = 4;
@@ -94,7 +94,7 @@ namespace Gear_Store
             this.btn_Maxi.FlatAppearance.BorderSize = 0;
             this.btn_Maxi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Maxi.Image = ((System.Drawing.Image)(resources.GetObject("btn_Maxi.Image")));
-            this.btn_Maxi.Location = new System.Drawing.Point(1084, 0);
+            this.btn_Maxi.Location = new System.Drawing.Point(1124, 0);
             this.btn_Maxi.Name = "btn_Maxi";
             this.btn_Maxi.Size = new System.Drawing.Size(57, 35);
             this.btn_Maxi.TabIndex = 2;
@@ -107,7 +107,7 @@ namespace Gear_Store
             this.btn_Quit.FlatAppearance.BorderSize = 0;
             this.btn_Quit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Quit.Image = ((System.Drawing.Image)(resources.GetObject("btn_Quit.Image")));
-            this.btn_Quit.Location = new System.Drawing.Point(1141, 0);
+            this.btn_Quit.Location = new System.Drawing.Point(1181, 0);
             this.btn_Quit.Name = "btn_Quit";
             this.btn_Quit.Size = new System.Drawing.Size(59, 35);
             this.btn_Quit.TabIndex = 1;
@@ -127,7 +127,7 @@ namespace Gear_Store
             this.panel_Wrapper.Location = new System.Drawing.Point(0, 79);
             this.panel_Wrapper.Name = "panel_Wrapper";
             this.panel_Wrapper.ShowBorders = true;
-            this.panel_Wrapper.Size = new System.Drawing.Size(1200, 621);
+            this.panel_Wrapper.Size = new System.Drawing.Size(1240, 621);
             this.panel_Wrapper.TabIndex = 3;
             // 
             // page
@@ -148,7 +148,7 @@ namespace Gear_Store
             this.page.PageName = "pDashboard";
             this.page.PageTitle = "Dashboard";
             this.page.SelectedIndex = 0;
-            this.page.Size = new System.Drawing.Size(1200, 621);
+            this.page.Size = new System.Drawing.Size(1240, 621);
             this.page.TabIndex = 0;
             animation1.AnimateOnlyDifferences = true;
             animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
@@ -174,7 +174,7 @@ namespace Gear_Store
             this.pDashboard.Location = new System.Drawing.Point(4, 4);
             this.pDashboard.Name = "pDashboard";
             this.pDashboard.Padding = new System.Windows.Forms.Padding(3);
-            this.pDashboard.Size = new System.Drawing.Size(1192, 595);
+            this.pDashboard.Size = new System.Drawing.Size(1232, 595);
             this.pDashboard.TabIndex = 0;
             this.pDashboard.Text = "Dashboard";
             // 
@@ -236,7 +236,7 @@ namespace Gear_Store
             this.panelNavigation.Location = new System.Drawing.Point(0, 35);
             this.panelNavigation.Name = "panelNavigation";
             this.panelNavigation.ShowBorders = true;
-            this.panelNavigation.Size = new System.Drawing.Size(1200, 44);
+            this.panelNavigation.Size = new System.Drawing.Size(1240, 44);
             this.panelNavigation.TabIndex = 2;
             // 
             // bunifuSeparator1
@@ -710,7 +710,7 @@ namespace Gear_Store
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(40)))), ((int)(((byte)(46)))));
-            this.ClientSize = new System.Drawing.Size(1200, 700);
+            this.ClientSize = new System.Drawing.Size(1240, 700);
             this.Controls.Add(this.panel_Wrapper);
             this.Controls.Add(this.panelNavigation);
             this.Controls.Add(this.panelTopBar);
