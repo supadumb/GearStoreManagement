@@ -47,5 +47,10 @@ namespace Gear_Store
         {
             LoadDashboard();
         }
+
+        private void bunifuVScrollBar1_Scroll(object sender, Bunifu.UI.WinForms.BunifuVScrollBar.ScrollEventArgs e)
+        {
+ 
+        }
     }
 }
