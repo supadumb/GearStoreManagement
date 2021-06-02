@@ -183,6 +183,7 @@
     <Compile Include="Form_Dashboard.Designer.cs">
       <DependentUpon>Form_Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="testpush.cs" />
     <EmbeddedResource Include="Form_Customer.resx">
       <DependentUpon>Form_Customer.cs</DependentUpon>
     </EmbeddedResource>
