@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Gear_Store
 {
     public partial class Form_Menu : Form
@@ -18,6 +19,7 @@ namespace Gear_Store
 
         Form_Customer frm_cus;
         Form_Product frm_pro;
+        Form_Dashboard frm_dash;
         public Form_Menu()
         {
             InitializeComponent();
@@ -89,6 +91,14 @@ namespace Gear_Store
                 FormBorderStyle = FormBorderStyle.None
             };
             pProduct.Controls.Add(frm_pro);
+            frm_dash = new Form_Dashboard()
+            {
+                Dock = DockStyle.Fill,
+                TopLevel = false,
+                TopMost = true,
+                FormBorderStyle = FormBorderStyle.None
+            };
+            pDashboard.Controls.Add(frm_dash);
 
         }
         private void Form_Menu_Load(object sender, EventArgs e)
@@ -98,7 +108,9 @@ namespace Gear_Store
 
         private void btnDashBoard_Click(object sender, EventArgs e)
         {
-            
+            page.SetPage(0);
+            frm_dash.Refresh();
+            frm_dash.Show();
         }
 
         private void btnCustomer_Click(object sender, EventArgs e)

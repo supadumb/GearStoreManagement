@@ -168,5 +168,10 @@ namespace Gear_Store
         {
             bunifuLabel2.Text = mode;
         }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

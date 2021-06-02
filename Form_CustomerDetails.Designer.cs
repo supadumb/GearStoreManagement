@@ -1053,6 +1053,7 @@ namespace Gear_Store
             this.btnCancel.TextMarginLeft = 0;
             this.btnCancel.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnCancel.UseDefaultRadiusAndThickness = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnDashBoard
             // 
