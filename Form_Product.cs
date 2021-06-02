@@ -40,19 +40,9 @@ namespace Gear_Store
         #endregion
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            try
-            {
-                using (Form_ProductInfo frm_pro = new Form_ProductInfo())
-                {
-                    frm_pro.mode = "New Customer";
-                    frm_pro.ShowDialog();
-                }
-            }
-            catch (Exception err)
-            {
-                MessageBox.Show(err.Message);
-            }
-        }
+            Form_ProductDetails frm = new Form_ProductDetails();
+            frm.Show();
 
+        }
     }
 }

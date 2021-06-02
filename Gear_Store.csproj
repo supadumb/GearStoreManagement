@@ -169,6 +169,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form_Brand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Brand.Designer.cs">
+      <DependentUpon>Form_Brand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ProductDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ProductDetails.Designer.cs">
+      <DependentUpon>Form_ProductDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Customer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -207,7 +219,12 @@
     <Compile Include="Form_Dashboard.Designer.cs">
       <DependentUpon>Form_Dashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="test push.cs" />
+    <EmbeddedResource Include="Form_Brand.resx">
+      <DependentUpon>Form_Brand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ProductDetails.resx">
+      <DependentUpon>Form_ProductDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Customer.resx">
       <DependentUpon>Form_Customer.cs</DependentUpon>
     </EmbeddedResource>
