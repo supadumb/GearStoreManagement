@@ -21,5 +21,10 @@ namespace Gear_Store
         {
 
         }
+
+        private void btnAddBrand_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -211,6 +211,12 @@
     <Compile Include="Form_ProductInfo.Designer.cs">
       <DependentUpon>Form_ProductInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="UCProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCProduct.Designer.cs">
+      <DependentUpon>UCProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Form_Dashboard.cs">
@@ -240,6 +246,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_ProductInfo.resx">
       <DependentUpon>Form_ProductInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCProduct.resx">
+      <DependentUpon>UCProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -331,6 +340,33 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngaaa.com-221013.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Laptop2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mouse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\keyboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\audio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monitor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\other.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -44,5 +44,34 @@ namespace Gear_Store
             frm.Show();
 
         }
+
+
+        #region Load Data
+
+        private void LoadProd()
+        {
+            UCProduct[] listprod = new UCProduct[20];
+            for(int i=0; i < listprod.Length; i++)
+            {
+                listprod[i] = new UCProduct();
+                listprod[i].Title = "Test HERE!!!";
+                listprod[i].Price = "1000000000$";
+
+                flowtabOther.Controls.Add(listprod[i]);
+                
+            }
+        }
+        #endregion
+
+        private void Form_Product_Load(object sender, EventArgs e)
+        {
+            LoadProd();
+        }
+
+        private void btnOther_Click(object sender, EventArgs e)
+        {
+            tabButon.Hide();
+            tabOther.Show();
+        }
     }
 }
