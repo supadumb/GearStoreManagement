@@ -243,29 +243,29 @@
   </data>
   <data name="bunifuTextBox1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAPQAAAAgCAYAAAAlgFXHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACZSURBVHhe7dOxCQMxAARB9V+VHpXhMlyAH4ESl6BlBi65
+        iVBORw0KGgoAAAANSUhEUgAAAPQAAAAlCAYAAAB1TcR0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACoSURBVHhe7dOxCQMxAARB9V+VHpXhMlyAH4ESl6BlBi65
         fAcQs9b6zDl/ZnbndsMn5zH2AdxrN3xyFjTcTtAQImgIETSECBpCBA0hgoYQQUOIoCFE0BAiaAgRNIQI
-        GkIEDSGChhBBQ4igIUTQECJoCBE0hAgaQgQNIYKGEEFDiKAhRNAQImgI+Qv6eZ7vPszszu2GT85Awxgv
-        3Dd2HoYVaY0AAAAASUVORK5CYII=
+        GkIEDSGChhBBQ4igIUTQECJoCBE0hAgaQgQNIYKGEEFDiKAhRNAQImgIETSECBpCBA0hgoYQQUPIX9DP
+        83z3YWZ3bjd8cgYaxngB+qRE8dDrwikAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="txtProdID.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAPEAAAAgCAYAAADDqZ6DAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACYSURBVHhe7dOxCQMxAARB9V+VhMr4MlyAjUCJS9hnBi65
+        iVBORw0KGgoAAAANSUhEUgAAAPEAAAAlCAYAAACTZA8wAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACmSURBVHhe7dOxCQMxAARB9V+VhMr4MlyAjUCJS9hnBi65
         fAfwAnvvZ875NbPOTrc34THOAbScbm/CIoYiEUOciCFOxBAnYogTMcSJGOJEDHEihjgRQ5yIIU7EECdi
-        iBMxxIkY4kQMcSKGOBFDnIghTsQQJ2KIEzHEiRjiRAxxIoY4EUOciCHuL+K11uccZtbZ6fYmDHSN8QPx
-        dBPlKDCwiwAAAABJRU5ErkJggg==
+        iBMxxIkY4kQMcSKGOBFDnIghTsQQJ2KIEzHEiRjiRAxxIoY4EUOciCFOxBAnYogTMcSJGOJEDHF/Ea+1
+        Pucws85OtzdhoGuMH8C0puUH+Y/eAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="txtPName.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAPEAAAAgCAYAAADDqZ6DAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACYSURBVHhe7dOxCQMxAARB9V+VhMr4MlyAjUCJS9hnBi65
+        iVBORw0KGgoAAAANSUhEUgAAAPEAAAAlCAYAAACTZA8wAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACmSURBVHhe7dOxCQMxAARB9V+VhMr4MlyAjUCJS9hnBi65
         fAfwAnvvZ875NbPOTrc34THOAbScbm/CIoYiEUOciCFOxBAnYogTMcSJGOJEDHEihjgRQ5yIIU7EECdi
-        iBMxxIkY4kQMcSKGOBFDnIghTsQQJ2KIEzHEiRjiRAxxIoY4EUOciCHuL+K11uccZtbZ6fYmDHSN8QPx
-        dBPlKDCwiwAAAABJRU5ErkJggg==
+        iBMxxIkY4kQMcSKGOBFDnIghTsQQJ2KIEzHEiRjiRAxxIoY4EUOciCFOxBAnYogTMcSJGOJEDHF/Ea+1
+        Pucws85OtzdhoGuMH8C0puUH+Y/eAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="txtEmail.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

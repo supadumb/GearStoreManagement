@@ -219,6 +219,7 @@
     <Compile Include="Form_Dashboard.Designer.cs">
       <DependentUpon>Form_Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="testbranch.cs" />
     <EmbeddedResource Include="Form_Brand.resx">
       <DependentUpon>Form_Brand.cs</DependentUpon>
     </EmbeddedResource>
