@@ -275,7 +275,7 @@ namespace Gear_Store
             this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.LinkColor = System.Drawing.Color.DarkOrange;
-            this.linkLabel1.Location = new System.Drawing.Point(335, 171);
+            this.linkLabel1.Location = new System.Drawing.Point(335, 173);
             this.linkLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(94, 20);
@@ -325,7 +325,7 @@ namespace Gear_Store
             this.bunifuTextBox1.IconRight = null;
             this.bunifuTextBox1.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBox1.Lines = new string[0];
-            this.bunifuTextBox1.Location = new System.Drawing.Point(183, 245);
+            this.bunifuTextBox1.Location = new System.Drawing.Point(183, 248);
             this.bunifuTextBox1.MaxLength = 32767;
             this.bunifuTextBox1.MinimumSize = new System.Drawing.Size(1, 1);
             this.bunifuTextBox1.Modified = false;
@@ -351,7 +351,7 @@ namespace Gear_Store
             stateProperties4.ForeColor = System.Drawing.Color.Black;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.bunifuTextBox1.OnIdleState = stateProperties4;
-            this.bunifuTextBox1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.bunifuTextBox1.Padding = new System.Windows.Forms.Padding(3);
             this.bunifuTextBox1.PasswordChar = '\0';
             this.bunifuTextBox1.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.bunifuTextBox1.PlaceholderText = "";
@@ -361,7 +361,7 @@ namespace Gear_Store
             this.bunifuTextBox1.SelectionLength = 0;
             this.bunifuTextBox1.SelectionStart = 0;
             this.bunifuTextBox1.ShortcutsEnabled = true;
-            this.bunifuTextBox1.Size = new System.Drawing.Size(244, 32);
+            this.bunifuTextBox1.Size = new System.Drawing.Size(244, 37);
             this.bunifuTextBox1.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.bunifuTextBox1.TabIndex = 74;
             this.bunifuTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -400,7 +400,7 @@ namespace Gear_Store
             this.txtProdID.IconRight = null;
             this.txtProdID.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtProdID.Lines = new string[0];
-            this.txtProdID.Location = new System.Drawing.Point(183, 30);
+            this.txtProdID.Location = new System.Drawing.Point(183, 28);
             this.txtProdID.MaxLength = 32767;
             this.txtProdID.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtProdID.Modified = false;
@@ -426,7 +426,7 @@ namespace Gear_Store
             stateProperties8.ForeColor = System.Drawing.Color.Black;
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtProdID.OnIdleState = stateProperties8;
-            this.txtProdID.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.txtProdID.Padding = new System.Windows.Forms.Padding(3);
             this.txtProdID.PasswordChar = '\0';
             this.txtProdID.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtProdID.PlaceholderText = "";
@@ -436,7 +436,7 @@ namespace Gear_Store
             this.txtProdID.SelectionLength = 0;
             this.txtProdID.SelectionStart = 0;
             this.txtProdID.ShortcutsEnabled = true;
-            this.txtProdID.Size = new System.Drawing.Size(241, 32);
+            this.txtProdID.Size = new System.Drawing.Size(241, 37);
             this.txtProdID.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtProdID.TabIndex = 72;
             this.txtProdID.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -481,8 +481,8 @@ namespace Gear_Store
             this.cdBrand.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
             this.cdBrand.ItemHighLightForeColor = System.Drawing.Color.White;
             this.cdBrand.ItemTopMargin = 3;
-            this.cdBrand.Location = new System.Drawing.Point(183, 193);
-            this.cdBrand.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cdBrand.Location = new System.Drawing.Point(183, 197);
+            this.cdBrand.Margin = new System.Windows.Forms.Padding(2);
             this.cdBrand.Name = "cdBrand";
             this.cdBrand.Size = new System.Drawing.Size(244, 32);
             this.cdBrand.TabIndex = 64;
@@ -524,8 +524,8 @@ namespace Gear_Store
             this.cbProdType.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
             this.cbProdType.ItemHighLightForeColor = System.Drawing.Color.White;
             this.cbProdType.ItemTopMargin = 3;
-            this.cbProdType.Location = new System.Drawing.Point(183, 138);
-            this.cbProdType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbProdType.Location = new System.Drawing.Point(183, 140);
+            this.cbProdType.Margin = new System.Windows.Forms.Padding(2);
             this.cbProdType.Name = "cbProdType";
             this.cbProdType.Size = new System.Drawing.Size(242, 32);
             this.cbProdType.TabIndex = 63;
@@ -561,7 +561,7 @@ namespace Gear_Store
             this.txtPName.IconRight = null;
             this.txtPName.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPName.Lines = new string[0];
-            this.txtPName.Location = new System.Drawing.Point(183, 83);
+            this.txtPName.Location = new System.Drawing.Point(183, 80);
             this.txtPName.MaxLength = 32767;
             this.txtPName.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtPName.Modified = false;
@@ -587,7 +587,7 @@ namespace Gear_Store
             stateProperties12.ForeColor = System.Drawing.Color.Black;
             stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtPName.OnIdleState = stateProperties12;
-            this.txtPName.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.txtPName.Padding = new System.Windows.Forms.Padding(3);
             this.txtPName.PasswordChar = '\0';
             this.txtPName.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtPName.PlaceholderText = "";
@@ -597,7 +597,7 @@ namespace Gear_Store
             this.txtPName.SelectionLength = 0;
             this.txtPName.SelectionStart = 0;
             this.txtPName.ShortcutsEnabled = true;
-            this.txtPName.Size = new System.Drawing.Size(241, 32);
+            this.txtPName.Size = new System.Drawing.Size(241, 37);
             this.txtPName.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtPName.TabIndex = 59;
             this.txtPName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -636,7 +636,7 @@ namespace Gear_Store
             this.txtEmail.IconRight = null;
             this.txtEmail.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtEmail.Lines = new string[0];
-            this.txtEmail.Location = new System.Drawing.Point(183, 297);
+            this.txtEmail.Location = new System.Drawing.Point(183, 303);
             this.txtEmail.MaxLength = 32767;
             this.txtEmail.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtEmail.Modified = false;
@@ -662,7 +662,7 @@ namespace Gear_Store
             stateProperties16.ForeColor = System.Drawing.Color.Black;
             stateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtEmail.OnIdleState = stateProperties16;
-            this.txtEmail.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.txtEmail.Padding = new System.Windows.Forms.Padding(3);
             this.txtEmail.PasswordChar = '\0';
             this.txtEmail.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtEmail.PlaceholderText = "";
@@ -710,7 +710,7 @@ namespace Gear_Store
             this.Picbox.Image = ((System.Drawing.Image)(resources.GetObject("Picbox.Image")));
             this.Picbox.IsCircle = false;
             this.Picbox.Location = new System.Drawing.Point(3, 23);
-            this.Picbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Picbox.Margin = new System.Windows.Forms.Padding(2);
             this.Picbox.Name = "Picbox";
             this.Picbox.Size = new System.Drawing.Size(297, 288);
             this.Picbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
