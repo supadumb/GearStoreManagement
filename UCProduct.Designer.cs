@@ -176,6 +176,7 @@ namespace Gear_Store
             this.labelMoreDetail.TabIndex = 4;
             this.labelMoreDetail.TabStop = true;
             this.labelMoreDetail.Text = "Click here for details...";
+            this.labelMoreDetail.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.labelMoreDetail_LinkClicked);
             // 
             // UCProduct
             // 

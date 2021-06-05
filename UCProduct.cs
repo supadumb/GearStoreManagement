@@ -12,6 +12,7 @@ namespace Gear_Store
 {
     public partial class UCProduct : UserControl
     {
+        Form_ProductInfo fm = new Form_ProductInfo();
         public UCProduct()
         {
             InitializeComponent();
@@ -45,6 +46,12 @@ namespace Gear_Store
         private void btnBuy_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void labelMoreDetail_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+            fm.Show(); 
         }
     }
 }

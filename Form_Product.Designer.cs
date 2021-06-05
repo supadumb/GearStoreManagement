@@ -60,11 +60,19 @@ namespace Gear_Store
             this.btnAdd = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnPrint = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.txtSearcher = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.ucProduct1 = new Gear_Store.UCProduct();
+            this.fllowLaptop = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowMouse = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowKeyBoard = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowMonitor = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowAudio = new System.Windows.Forms.FlowLayoutPanel();
             this.PageCateProd.SuspendLayout();
             this.tabButon.SuspendLayout();
+            this.tabLaptop.SuspendLayout();
+            this.tabMouse.SuspendLayout();
+            this.tabKeyboard.SuspendLayout();
+            this.tabMonitor.SuspendLayout();
+            this.tabAudio.SuspendLayout();
             this.tabOther.SuspendLayout();
-            this.flowtabOther.SuspendLayout();
             this.SuspendLayout();
             // 
             // cbbFilterSearch
@@ -124,10 +132,10 @@ namespace Gear_Store
             this.PageCateProd.Location = new System.Drawing.Point(23, 87);
             this.PageCateProd.Multiline = true;
             this.PageCateProd.Name = "PageCateProd";
-            this.PageCateProd.Page = this.tabOther;
-            this.PageCateProd.PageIndex = 6;
-            this.PageCateProd.PageName = "tabOther";
-            this.PageCateProd.PageTitle = "tabOther";
+            this.PageCateProd.Page = this.tabButon;
+            this.PageCateProd.PageIndex = 0;
+            this.PageCateProd.PageName = "tabButon";
+            this.PageCateProd.PageTitle = "tabButton";
             this.PageCateProd.SelectedIndex = 0;
             this.PageCateProd.Size = new System.Drawing.Size(1186, 511);
             this.PageCateProd.TabIndex = 19;
@@ -374,49 +382,54 @@ namespace Gear_Store
             // 
             // tabLaptop
             // 
+            this.tabLaptop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(127)))), ((int)(((byte)(135)))));
+            this.tabLaptop.Controls.Add(this.fllowLaptop);
             this.tabLaptop.Location = new System.Drawing.Point(4, 4);
             this.tabLaptop.Name = "tabLaptop";
             this.tabLaptop.Padding = new System.Windows.Forms.Padding(3);
             this.tabLaptop.Size = new System.Drawing.Size(1178, 485);
             this.tabLaptop.TabIndex = 1;
             this.tabLaptop.Text = "tabLap";
-            this.tabLaptop.UseVisualStyleBackColor = true;
             // 
             // tabMouse
             // 
+            this.tabMouse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(127)))), ((int)(((byte)(135)))));
+            this.tabMouse.Controls.Add(this.flowMouse);
             this.tabMouse.Location = new System.Drawing.Point(4, 4);
             this.tabMouse.Name = "tabMouse";
             this.tabMouse.Size = new System.Drawing.Size(1178, 485);
             this.tabMouse.TabIndex = 2;
             this.tabMouse.Text = "tabMouse";
-            this.tabMouse.UseVisualStyleBackColor = true;
             // 
             // tabKeyboard
             // 
+            this.tabKeyboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(127)))), ((int)(((byte)(135)))));
+            this.tabKeyboard.Controls.Add(this.flowKeyBoard);
             this.tabKeyboard.Location = new System.Drawing.Point(4, 4);
             this.tabKeyboard.Name = "tabKeyboard";
             this.tabKeyboard.Size = new System.Drawing.Size(1178, 485);
             this.tabKeyboard.TabIndex = 3;
             this.tabKeyboard.Text = "tabKeyboard";
-            this.tabKeyboard.UseVisualStyleBackColor = true;
             // 
             // tabMonitor
             // 
+            this.tabMonitor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(127)))), ((int)(((byte)(135)))));
+            this.tabMonitor.Controls.Add(this.flowMonitor);
             this.tabMonitor.Location = new System.Drawing.Point(4, 4);
             this.tabMonitor.Name = "tabMonitor";
             this.tabMonitor.Size = new System.Drawing.Size(1178, 485);
             this.tabMonitor.TabIndex = 4;
             this.tabMonitor.Text = "tabMonitor";
-            this.tabMonitor.UseVisualStyleBackColor = true;
             // 
             // tabAudio
             // 
+            this.tabAudio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(127)))), ((int)(((byte)(135)))));
+            this.tabAudio.Controls.Add(this.flowAudio);
             this.tabAudio.Location = new System.Drawing.Point(4, 4);
             this.tabAudio.Name = "tabAudio";
             this.tabAudio.Size = new System.Drawing.Size(1178, 485);
             this.tabAudio.TabIndex = 5;
             this.tabAudio.Text = "tabAudio";
-            this.tabAudio.UseVisualStyleBackColor = true;
             // 
             // tabOther
             // 
@@ -431,8 +444,7 @@ namespace Gear_Store
             // flowtabOther
             // 
             this.flowtabOther.AutoScroll = true;
-            this.flowtabOther.Controls.Add(this.ucProduct1);
-            this.flowtabOther.Location = new System.Drawing.Point(121, 3);
+            this.flowtabOther.Location = new System.Drawing.Point(128, 3);
             this.flowtabOther.Name = "flowtabOther";
             this.flowtabOther.Size = new System.Drawing.Size(923, 479);
             this.flowtabOther.TabIndex = 0;
@@ -876,16 +888,45 @@ namespace Gear_Store
             this.txtSearcher.UseSystemPasswordChar = false;
             this.txtSearcher.WordWrap = true;
             // 
-            // ucProduct1
+            // fllowLaptop
             // 
-            this.ucProduct1.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.ucProduct1.Location = new System.Drawing.Point(3, 3);
-            this.ucProduct1.Name = "ucProduct1";
-            this.ucProduct1.Picture = null;
-            this.ucProduct1.Price = null;
-            this.ucProduct1.Size = new System.Drawing.Size(900, 234);
-            this.ucProduct1.TabIndex = 0;
-            this.ucProduct1.Title = null;
+            this.fllowLaptop.AutoScroll = true;
+            this.fllowLaptop.Location = new System.Drawing.Point(128, 3);
+            this.fllowLaptop.Name = "fllowLaptop";
+            this.fllowLaptop.Size = new System.Drawing.Size(923, 479);
+            this.fllowLaptop.TabIndex = 1;
+            // 
+            // flowMouse
+            // 
+            this.flowMouse.AutoScroll = true;
+            this.flowMouse.Location = new System.Drawing.Point(128, 3);
+            this.flowMouse.Name = "flowMouse";
+            this.flowMouse.Size = new System.Drawing.Size(923, 479);
+            this.flowMouse.TabIndex = 1;
+            // 
+            // flowKeyBoard
+            // 
+            this.flowKeyBoard.AutoScroll = true;
+            this.flowKeyBoard.Location = new System.Drawing.Point(128, 3);
+            this.flowKeyBoard.Name = "flowKeyBoard";
+            this.flowKeyBoard.Size = new System.Drawing.Size(923, 479);
+            this.flowKeyBoard.TabIndex = 1;
+            // 
+            // flowMonitor
+            // 
+            this.flowMonitor.AutoScroll = true;
+            this.flowMonitor.Location = new System.Drawing.Point(128, 3);
+            this.flowMonitor.Name = "flowMonitor";
+            this.flowMonitor.Size = new System.Drawing.Size(923, 479);
+            this.flowMonitor.TabIndex = 1;
+            // 
+            // flowAudio
+            // 
+            this.flowAudio.AutoScroll = true;
+            this.flowAudio.Location = new System.Drawing.Point(128, 3);
+            this.flowAudio.Name = "flowAudio";
+            this.flowAudio.Size = new System.Drawing.Size(923, 479);
+            this.flowAudio.TabIndex = 1;
             // 
             // Form_Product
             // 
@@ -906,8 +947,12 @@ namespace Gear_Store
             this.Load += new System.EventHandler(this.Form_Product_Load);
             this.PageCateProd.ResumeLayout(false);
             this.tabButon.ResumeLayout(false);
+            this.tabLaptop.ResumeLayout(false);
+            this.tabMouse.ResumeLayout(false);
+            this.tabKeyboard.ResumeLayout(false);
+            this.tabMonitor.ResumeLayout(false);
+            this.tabAudio.ResumeLayout(false);
             this.tabOther.ResumeLayout(false);
-            this.flowtabOther.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -935,6 +980,10 @@ namespace Gear_Store
         private System.Windows.Forms.TabPage tabAudio;
         private System.Windows.Forms.TabPage tabOther;
         private System.Windows.Forms.FlowLayoutPanel flowtabOther;
-        private UCProduct ucProduct1;
+        private System.Windows.Forms.FlowLayoutPanel fllowLaptop;
+        private System.Windows.Forms.FlowLayoutPanel flowMouse;
+        private System.Windows.Forms.FlowLayoutPanel flowKeyBoard;
+        private System.Windows.Forms.FlowLayoutPanel flowMonitor;
+        private System.Windows.Forms.FlowLayoutPanel flowAudio;
     }
 }
