@@ -51,7 +51,7 @@ namespace Gear_Store
         private void labelMoreDetail_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
-            fm.Show(); 
+           
         }
     }
 }

@@ -54,17 +54,35 @@ namespace Gear_Store
             this.tabMonitor = new System.Windows.Forms.TabPage();
             this.tabAudio = new System.Windows.Forms.TabPage();
             this.tabOther = new System.Windows.Forms.TabPage();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.flowtabOther = new System.Windows.Forms.FlowLayoutPanel();
             this.btnReload = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnDel = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnAdd = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnPrint = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.txtSearcher = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.fllowLaptop = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowMouse = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowKeyBoard = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowMonitor = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowAudio = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnTurnBack = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.PageCateProd.SuspendLayout();
             this.tabButon.SuspendLayout();
             this.tabLaptop.SuspendLayout();
@@ -73,6 +91,12 @@ namespace Gear_Store
             this.tabMonitor.SuspendLayout();
             this.tabAudio.SuspendLayout();
             this.tabOther.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // cbbFilterSearch
@@ -132,10 +156,10 @@ namespace Gear_Store
             this.PageCateProd.Location = new System.Drawing.Point(23, 87);
             this.PageCateProd.Multiline = true;
             this.PageCateProd.Name = "PageCateProd";
-            this.PageCateProd.Page = this.tabButon;
-            this.PageCateProd.PageIndex = 0;
-            this.PageCateProd.PageName = "tabButon";
-            this.PageCateProd.PageTitle = "tabButton";
+            this.PageCateProd.Page = this.tabKeyboard;
+            this.PageCateProd.PageIndex = 3;
+            this.PageCateProd.PageName = "tabKeyboard";
+            this.PageCateProd.PageTitle = "tabKeyboard";
             this.PageCateProd.SelectedIndex = 0;
             this.PageCateProd.Size = new System.Drawing.Size(1186, 511);
             this.PageCateProd.TabIndex = 19;
@@ -383,7 +407,9 @@ namespace Gear_Store
             // tabLaptop
             // 
             this.tabLaptop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(127)))), ((int)(((byte)(135)))));
-            this.tabLaptop.Controls.Add(this.fllowLaptop);
+            this.tabLaptop.Controls.Add(this.panel8);
+            this.tabLaptop.Controls.Add(this.panel9);
+            this.tabLaptop.Controls.Add(this.flowLayoutPanel5);
             this.tabLaptop.Location = new System.Drawing.Point(4, 4);
             this.tabLaptop.Name = "tabLaptop";
             this.tabLaptop.Padding = new System.Windows.Forms.Padding(3);
@@ -394,7 +420,9 @@ namespace Gear_Store
             // tabMouse
             // 
             this.tabMouse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(127)))), ((int)(((byte)(135)))));
-            this.tabMouse.Controls.Add(this.flowMouse);
+            this.tabMouse.Controls.Add(this.panel5);
+            this.tabMouse.Controls.Add(this.panel10);
+            this.tabMouse.Controls.Add(this.flowLayoutPanel4);
             this.tabMouse.Location = new System.Drawing.Point(4, 4);
             this.tabMouse.Name = "tabMouse";
             this.tabMouse.Size = new System.Drawing.Size(1178, 485);
@@ -404,7 +432,9 @@ namespace Gear_Store
             // tabKeyboard
             // 
             this.tabKeyboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(127)))), ((int)(((byte)(135)))));
-            this.tabKeyboard.Controls.Add(this.flowKeyBoard);
+            this.tabKeyboard.Controls.Add(this.panel4);
+            this.tabKeyboard.Controls.Add(this.panel11);
+            this.tabKeyboard.Controls.Add(this.flowLayoutPanel3);
             this.tabKeyboard.Location = new System.Drawing.Point(4, 4);
             this.tabKeyboard.Name = "tabKeyboard";
             this.tabKeyboard.Size = new System.Drawing.Size(1178, 485);
@@ -414,7 +444,9 @@ namespace Gear_Store
             // tabMonitor
             // 
             this.tabMonitor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(127)))), ((int)(((byte)(135)))));
-            this.tabMonitor.Controls.Add(this.flowMonitor);
+            this.tabMonitor.Controls.Add(this.panel3);
+            this.tabMonitor.Controls.Add(this.panel12);
+            this.tabMonitor.Controls.Add(this.flowLayoutPanel2);
             this.tabMonitor.Location = new System.Drawing.Point(4, 4);
             this.tabMonitor.Name = "tabMonitor";
             this.tabMonitor.Size = new System.Drawing.Size(1178, 485);
@@ -424,7 +456,9 @@ namespace Gear_Store
             // tabAudio
             // 
             this.tabAudio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(127)))), ((int)(((byte)(135)))));
-            this.tabAudio.Controls.Add(this.flowAudio);
+            this.tabAudio.Controls.Add(this.panel2);
+            this.tabAudio.Controls.Add(this.panel7);
+            this.tabAudio.Controls.Add(this.flowLayoutPanel1);
             this.tabAudio.Location = new System.Drawing.Point(4, 4);
             this.tabAudio.Name = "tabAudio";
             this.tabAudio.Size = new System.Drawing.Size(1178, 485);
@@ -434,6 +468,8 @@ namespace Gear_Store
             // tabOther
             // 
             this.tabOther.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(127)))), ((int)(((byte)(135)))));
+            this.tabOther.Controls.Add(this.panel6);
+            this.tabOther.Controls.Add(this.panel1);
             this.tabOther.Controls.Add(this.flowtabOther);
             this.tabOther.Location = new System.Drawing.Point(4, 4);
             this.tabOther.Name = "tabOther";
@@ -441,12 +477,31 @@ namespace Gear_Store
             this.tabOther.TabIndex = 6;
             this.tabOther.Text = "tabOther";
             // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.btnTurnBack);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(75, 485);
+            this.panel6.TabIndex = 2;
+            // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = global::Gear_Store.Properties.Resources.Thêm_tiêu_đề_phụ1;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.Location = new System.Drawing.Point(929, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(249, 485);
+            this.panel1.TabIndex = 1;
+            // 
             // flowtabOther
             // 
             this.flowtabOther.AutoScroll = true;
-            this.flowtabOther.Location = new System.Drawing.Point(128, 3);
+            this.flowtabOther.Location = new System.Drawing.Point(79, -4);
             this.flowtabOther.Name = "flowtabOther";
-            this.flowtabOther.Size = new System.Drawing.Size(923, 479);
+            this.flowtabOther.Size = new System.Drawing.Size(846, 511);
             this.flowtabOther.TabIndex = 0;
             // 
             // btnReload
@@ -888,45 +943,207 @@ namespace Gear_Store
             this.txtSearcher.UseSystemPasswordChar = false;
             this.txtSearcher.WordWrap = true;
             // 
-            // fllowLaptop
+            // btnTurnBack
             // 
-            this.fllowLaptop.AutoScroll = true;
-            this.fllowLaptop.Location = new System.Drawing.Point(128, 3);
-            this.fllowLaptop.Name = "fllowLaptop";
-            this.fllowLaptop.Size = new System.Drawing.Size(923, 479);
-            this.fllowLaptop.TabIndex = 1;
+            this.btnTurnBack.BackgroundImage = global::Gear_Store.Properties.Resources.left;
+            this.btnTurnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnTurnBack.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTurnBack.Location = new System.Drawing.Point(0, 0);
+            this.btnTurnBack.Name = "btnTurnBack";
+            this.btnTurnBack.Size = new System.Drawing.Size(75, 52);
+            this.btnTurnBack.TabIndex = 0;
+            this.btnTurnBack.UseVisualStyleBackColor = true;
+            this.btnTurnBack.Click += new System.EventHandler(this.btnTurnBack_Click_1);
             // 
-            // flowMouse
+            // panel2
             // 
-            this.flowMouse.AutoScroll = true;
-            this.flowMouse.Location = new System.Drawing.Point(128, 3);
-            this.flowMouse.Name = "flowMouse";
-            this.flowMouse.Size = new System.Drawing.Size(923, 479);
-            this.flowMouse.TabIndex = 1;
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(75, 485);
+            this.panel2.TabIndex = 5;
             // 
-            // flowKeyBoard
+            // button1
             // 
-            this.flowKeyBoard.AutoScroll = true;
-            this.flowKeyBoard.Location = new System.Drawing.Point(128, 3);
-            this.flowKeyBoard.Name = "flowKeyBoard";
-            this.flowKeyBoard.Size = new System.Drawing.Size(923, 479);
-            this.flowKeyBoard.TabIndex = 1;
+            this.button1.BackgroundImage = global::Gear_Store.Properties.Resources.left;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 52);
+            this.button1.TabIndex = 0;
+            this.button1.UseVisualStyleBackColor = true;
             // 
-            // flowMonitor
+            // panel7
             // 
-            this.flowMonitor.AutoScroll = true;
-            this.flowMonitor.Location = new System.Drawing.Point(128, 3);
-            this.flowMonitor.Name = "flowMonitor";
-            this.flowMonitor.Size = new System.Drawing.Size(923, 479);
-            this.flowMonitor.TabIndex = 1;
+            this.panel7.BackgroundImage = global::Gear_Store.Properties.Resources.Thêm_tiêu_đề_phụ1;
+            this.panel7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel7.Location = new System.Drawing.Point(929, 0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(249, 485);
+            this.panel7.TabIndex = 4;
             // 
-            // flowAudio
+            // flowLayoutPanel1
             // 
-            this.flowAudio.AutoScroll = true;
-            this.flowAudio.Location = new System.Drawing.Point(128, 3);
-            this.flowAudio.Name = "flowAudio";
-            this.flowAudio.Size = new System.Drawing.Size(923, 479);
-            this.flowAudio.TabIndex = 1;
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(79, -13);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(846, 511);
+            this.flowLayoutPanel1.TabIndex = 3;
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.button2);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel8.Location = new System.Drawing.Point(3, 3);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(75, 479);
+            this.panel8.TabIndex = 5;
+            // 
+            // button2
+            // 
+            this.button2.BackgroundImage = global::Gear_Store.Properties.Resources.left;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button2.Location = new System.Drawing.Point(0, 0);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 52);
+            this.button2.TabIndex = 0;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // panel9
+            // 
+            this.panel9.BackgroundImage = global::Gear_Store.Properties.Resources.Thêm_tiêu_đề_phụ1;
+            this.panel9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel9.Location = new System.Drawing.Point(926, 3);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(249, 479);
+            this.panel9.TabIndex = 4;
+            // 
+            // flowLayoutPanel5
+            // 
+            this.flowLayoutPanel5.AutoScroll = true;
+            this.flowLayoutPanel5.Location = new System.Drawing.Point(79, -13);
+            this.flowLayoutPanel5.Name = "flowLayoutPanel5";
+            this.flowLayoutPanel5.Size = new System.Drawing.Size(846, 511);
+            this.flowLayoutPanel5.TabIndex = 3;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.button3);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(75, 485);
+            this.panel5.TabIndex = 5;
+            // 
+            // button3
+            // 
+            this.button3.BackgroundImage = global::Gear_Store.Properties.Resources.left;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button3.Location = new System.Drawing.Point(0, 0);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 52);
+            this.button3.TabIndex = 0;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // panel10
+            // 
+            this.panel10.BackgroundImage = global::Gear_Store.Properties.Resources.Thêm_tiêu_đề_phụ1;
+            this.panel10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel10.Location = new System.Drawing.Point(929, 0);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(249, 485);
+            this.panel10.TabIndex = 4;
+            // 
+            // flowLayoutPanel4
+            // 
+            this.flowLayoutPanel4.AutoScroll = true;
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(79, -13);
+            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(846, 511);
+            this.flowLayoutPanel4.TabIndex = 3;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.button4);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(75, 485);
+            this.panel4.TabIndex = 5;
+            // 
+            // button4
+            // 
+            this.button4.BackgroundImage = global::Gear_Store.Properties.Resources.left;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button4.Location = new System.Drawing.Point(0, 0);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 52);
+            this.button4.TabIndex = 0;
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // panel11
+            // 
+            this.panel11.BackgroundImage = global::Gear_Store.Properties.Resources.Thêm_tiêu_đề_phụ1;
+            this.panel11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel11.Location = new System.Drawing.Point(929, 0);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(249, 485);
+            this.panel11.TabIndex = 4;
+            // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.AutoScroll = true;
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(79, -13);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(846, 511);
+            this.flowLayoutPanel3.TabIndex = 3;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.button5);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(75, 485);
+            this.panel3.TabIndex = 5;
+            // 
+            // button5
+            // 
+            this.button5.BackgroundImage = global::Gear_Store.Properties.Resources.left;
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button5.Location = new System.Drawing.Point(0, 0);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 52);
+            this.button5.TabIndex = 0;
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // panel12
+            // 
+            this.panel12.BackgroundImage = global::Gear_Store.Properties.Resources.Thêm_tiêu_đề_phụ1;
+            this.panel12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel12.Location = new System.Drawing.Point(929, 0);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(249, 485);
+            this.panel12.TabIndex = 4;
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.AutoScroll = true;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(79, -13);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(846, 511);
+            this.flowLayoutPanel2.TabIndex = 3;
             // 
             // Form_Product
             // 
@@ -953,6 +1170,12 @@ namespace Gear_Store
             this.tabMonitor.ResumeLayout(false);
             this.tabAudio.ResumeLayout(false);
             this.tabOther.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -980,10 +1203,28 @@ namespace Gear_Store
         private System.Windows.Forms.TabPage tabAudio;
         private System.Windows.Forms.TabPage tabOther;
         private System.Windows.Forms.FlowLayoutPanel flowtabOther;
-        private System.Windows.Forms.FlowLayoutPanel fllowLaptop;
-        private System.Windows.Forms.FlowLayoutPanel flowMouse;
-        private System.Windows.Forms.FlowLayoutPanel flowKeyBoard;
-        private System.Windows.Forms.FlowLayoutPanel flowMonitor;
-        private System.Windows.Forms.FlowLayoutPanel flowAudio;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Button btnTurnBack;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

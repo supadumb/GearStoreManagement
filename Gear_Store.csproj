@@ -150,13 +150,22 @@
     <Reference Include="Bunifu.UI.WinForms.Deprecated, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
       <HintPath>packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.UI.WinForms.Deprecated.dll</HintPath>
     </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Extensions, Version=4.1.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\System.Runtime.Extensions.4.3.1\lib\net462\System.Runtime.Extensions.dll</HintPath>
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -169,6 +178,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Brand.cs">
+      <DependentUpon>Model_GearStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Category.cs">
+      <DependentUpon>Model_GearStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Customer.cs">
+      <DependentUpon>Model_GearStore.tt</DependentUpon>
+    </Compile>
     <Compile Include="Form_Brand.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,6 +222,45 @@
     </Compile>
     <Compile Include="Form_ProductInfo.Designer.cs">
       <DependentUpon>Form_ProductInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model_GearStore.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model_GearStore.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model_GearStore.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model_GearStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model_GearStore.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model_GearStore.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Order.cs">
+      <DependentUpon>Model_GearStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Order_Items.cs">
+      <DependentUpon>Model_GearStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Product.cs">
+      <DependentUpon>Model_GearStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SearchedBrand_Prod_Result.cs">
+      <DependentUpon>Model_GearStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SearchedBrand_Result.cs">
+      <DependentUpon>Model_GearStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SearchedCategory_Prod_Result.cs">
+      <DependentUpon>Model_GearStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SearchedCategory_Result.cs">
+      <DependentUpon>Model_GearStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Staff.cs">
+      <DependentUpon>Model_GearStore.tt</DependentUpon>
     </Compile>
     <Compile Include="UCProduct.cs">
       <SubType>UserControl</SubType>
@@ -254,6 +311,13 @@
     <EmbeddedResource Include="Form_Dashboard.resx">
       <DependentUpon>Form_Dashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EntityDeploy Include="Model_GearStore.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model_GearStore.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model_GearStore.edmx.diagram">
+      <DependentUpon>Model_GearStore.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -357,6 +421,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Thêm tiêu đề phụ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Thêm tiêu đề phụ1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model_GearStore.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model_GearStore.Context.cs</LastGenOutput>
+      <DependentUpon>Model_GearStore.edmx</DependentUpon>
+    </Content>
+    <Content Include="Model_GearStore.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model_GearStore.edmx</DependentUpon>
+      <LastGenOutput>Model_GearStore.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

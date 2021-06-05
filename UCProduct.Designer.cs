@@ -31,37 +31,21 @@ namespace Gear_Store
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCProduct));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            this.Picbox = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.labelName = new System.Windows.Forms.Label();
             this.labelPrice = new System.Windows.Forms.Label();
-            this.btnBuy = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.labelMoreDetail = new System.Windows.Forms.LinkLabel();
+            this.btnBuy = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.Picbox = new Bunifu.UI.WinForms.BunifuPictureBox();
+            this.labelStatus = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Picbox)).BeginInit();
             this.SuspendLayout();
-            // 
-            // Picbox
-            // 
-            this.Picbox.AllowFocused = false;
-            this.Picbox.AutoSizeHeight = true;
-            this.Picbox.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.Picbox.BorderRadius = 0;
-            this.Picbox.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Picbox.Image = ((System.Drawing.Image)(resources.GetObject("Picbox.Image")));
-            this.Picbox.IsCircle = false;
-            this.Picbox.Location = new System.Drawing.Point(0, 0);
-            this.Picbox.Name = "Picbox";
-            this.Picbox.Size = new System.Drawing.Size(233, 233);
-            this.Picbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Picbox.TabIndex = 0;
-            this.Picbox.TabStop = false;
-            this.Picbox.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Square;
             // 
             // labelName
             // 
             this.labelName.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelName.Location = new System.Drawing.Point(252, 13);
             this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(202, 75);
+            this.labelName.Size = new System.Drawing.Size(562, 75);
             this.labelName.TabIndex = 1;
             this.labelName.Text = "asdaw";
             // 
@@ -71,9 +55,22 @@ namespace Gear_Store
             this.labelPrice.ForeColor = System.Drawing.Color.Brown;
             this.labelPrice.Location = new System.Drawing.Point(289, 161);
             this.labelPrice.Name = "labelPrice";
-            this.labelPrice.Size = new System.Drawing.Size(162, 51);
+            this.labelPrice.Size = new System.Drawing.Size(162, 34);
             this.labelPrice.TabIndex = 2;
             this.labelPrice.Text = "10000000";
+            // 
+            // labelMoreDetail
+            // 
+            this.labelMoreDetail.AutoSize = true;
+            this.labelMoreDetail.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMoreDetail.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.labelMoreDetail.Location = new System.Drawing.Point(280, 122);
+            this.labelMoreDetail.Name = "labelMoreDetail";
+            this.labelMoreDetail.Size = new System.Drawing.Size(171, 21);
+            this.labelMoreDetail.TabIndex = 4;
+            this.labelMoreDetail.TabStop = true;
+            this.labelMoreDetail.Text = "Click here for details...";
+            this.labelMoreDetail.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.labelMoreDetail_LinkClicked);
             // 
             // btnBuy
             // 
@@ -103,7 +100,7 @@ namespace Gear_Store
             this.btnBuy.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnBuy.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnBuy.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btnBuy.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.btnBuy.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Idle;
             this.btnBuy.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuy.ForeColor = System.Drawing.Color.White;
             this.btnBuy.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -122,7 +119,7 @@ namespace Gear_Store
             this.btnBuy.IdleIconLeftImage = null;
             this.btnBuy.IdleIconRightImage = null;
             this.btnBuy.IndicateFocus = false;
-            this.btnBuy.Location = new System.Drawing.Point(699, 173);
+            this.btnBuy.Location = new System.Drawing.Point(648, 161);
             this.btnBuy.Name = "btnBuy";
             this.btnBuy.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnBuy.OnDisabledState.BorderRadius = 25;
@@ -156,7 +153,7 @@ namespace Gear_Store
             this.btnBuy.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnBuy.OnPressedState.IconLeftImage = null;
             this.btnBuy.OnPressedState.IconRightImage = null;
-            this.btnBuy.Size = new System.Drawing.Size(150, 39);
+            this.btnBuy.Size = new System.Drawing.Size(152, 49);
             this.btnBuy.TabIndex = 3;
             this.btnBuy.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnBuy.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -165,31 +162,47 @@ namespace Gear_Store
             this.btnBuy.UseDefaultRadiusAndThickness = true;
             this.btnBuy.Click += new System.EventHandler(this.btnBuy_Click);
             // 
-            // labelMoreDetail
+            // Picbox
             // 
-            this.labelMoreDetail.AutoSize = true;
-            this.labelMoreDetail.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMoreDetail.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.labelMoreDetail.Location = new System.Drawing.Point(417, 130);
-            this.labelMoreDetail.Name = "labelMoreDetail";
-            this.labelMoreDetail.Size = new System.Drawing.Size(171, 21);
-            this.labelMoreDetail.TabIndex = 4;
-            this.labelMoreDetail.TabStop = true;
-            this.labelMoreDetail.Text = "Click here for details...";
-            this.labelMoreDetail.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.labelMoreDetail_LinkClicked);
+            this.Picbox.AllowFocused = false;
+            this.Picbox.AutoSizeHeight = true;
+            this.Picbox.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.Picbox.BorderRadius = 0;
+            this.Picbox.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Picbox.Image = ((System.Drawing.Image)(resources.GetObject("Picbox.Image")));
+            this.Picbox.IsCircle = false;
+            this.Picbox.Location = new System.Drawing.Point(0, 0);
+            this.Picbox.Name = "Picbox";
+            this.Picbox.Size = new System.Drawing.Size(233, 233);
+            this.Picbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Picbox.TabIndex = 0;
+            this.Picbox.TabStop = false;
+            this.Picbox.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Square;
+            // 
+            // labelStatus
+            // 
+            this.labelStatus.AutoSize = true;
+            this.labelStatus.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelStatus.ForeColor = System.Drawing.Color.Green;
+            this.labelStatus.Location = new System.Drawing.Point(658, 109);
+            this.labelStatus.Name = "labelStatus";
+            this.labelStatus.Size = new System.Drawing.Size(127, 37);
+            this.labelStatus.TabIndex = 5;
+            this.labelStatus.Text = "In Stock.";
             // 
             // UCProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.Controls.Add(this.labelStatus);
             this.Controls.Add(this.labelMoreDetail);
             this.Controls.Add(this.btnBuy);
             this.Controls.Add(this.labelPrice);
             this.Controls.Add(this.labelName);
             this.Controls.Add(this.Picbox);
             this.Name = "UCProduct";
-            this.Size = new System.Drawing.Size(900, 234);
+            this.Size = new System.Drawing.Size(850, 234);
             ((System.ComponentModel.ISupportInitialize)(this.Picbox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -203,5 +216,6 @@ namespace Gear_Store
         private System.Windows.Forms.Label labelPrice;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnBuy;
         private System.Windows.Forms.LinkLabel labelMoreDetail;
+        private System.Windows.Forms.Label labelStatus;
     }
 }

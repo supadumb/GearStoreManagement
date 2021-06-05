@@ -12,6 +12,7 @@ namespace Gear_Store
 {
     public partial class Form_Product : Form
     {
+        Form_ProductInfo frm = new Form_ProductInfo();
         public Form_Product()
         {
             InitializeComponent();
@@ -40,7 +41,7 @@ namespace Gear_Store
         #endregion
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            Form_ProductDetails frm = new Form_ProductDetails();
+             
             frm.Show();
 
         }
@@ -72,6 +73,13 @@ namespace Gear_Store
         {
             tabButon.Hide();
             tabOther.Show();
+        }
+
+
+
+        private void btnTurnBack_Click_1(object sender, EventArgs e)
+        {
+            tabButon.Show();
         }
     }
 }
