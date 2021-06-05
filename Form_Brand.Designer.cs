@@ -115,12 +115,13 @@ namespace Gear_Store
             this.bunifuDataGridView1.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.bunifuDataGridView1.HeaderBgColor = System.Drawing.Color.Empty;
             this.bunifuDataGridView1.HeaderForeColor = System.Drawing.Color.White;
-            this.bunifuDataGridView1.Location = new System.Drawing.Point(39, 137);
+            this.bunifuDataGridView1.Location = new System.Drawing.Point(29, 111);
+            this.bunifuDataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bunifuDataGridView1.Name = "bunifuDataGridView1";
             this.bunifuDataGridView1.RowHeadersVisible = false;
             this.bunifuDataGridView1.RowTemplate.Height = 40;
             this.bunifuDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.bunifuDataGridView1.Size = new System.Drawing.Size(458, 355);
+            this.bunifuDataGridView1.Size = new System.Drawing.Size(344, 288);
             this.bunifuDataGridView1.TabIndex = 0;
             this.bunifuDataGridView1.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
@@ -129,7 +130,8 @@ namespace Gear_Store
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(35, 46);
+            this.label3.Location = new System.Drawing.Point(26, 37);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(104, 21);
             this.label3.TabIndex = 73;
@@ -146,10 +148,9 @@ namespace Gear_Store
             this.btn_Quit.FlatAppearance.BorderSize = 0;
             this.btn_Quit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Quit.Image = ((System.Drawing.Image)(resources.GetObject("btn_Quit.Image")));
-            this.btn_Quit.Location = new System.Drawing.Point(982, 4);
-            this.btn_Quit.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Quit.Location = new System.Drawing.Point(736, 3);
             this.btn_Quit.Name = "btn_Quit";
-            this.btn_Quit.Size = new System.Drawing.Size(56, 51);
+            this.btn_Quit.Size = new System.Drawing.Size(42, 41);
             this.btn_Quit.TabIndex = 75;
             this.btn_Quit.UseVisualStyleBackColor = false;
             // 
@@ -181,8 +182,7 @@ namespace Gear_Store
             this.txtProdID.IconRight = null;
             this.txtProdID.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtProdID.Lines = new string[0];
-            this.txtProdID.Location = new System.Drawing.Point(39, 71);
-            this.txtProdID.Margin = new System.Windows.Forms.Padding(4);
+            this.txtProdID.Location = new System.Drawing.Point(29, 58);
             this.txtProdID.MaxLength = 32767;
             this.txtProdID.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtProdID.Modified = false;
@@ -208,7 +208,7 @@ namespace Gear_Store
             stateProperties8.ForeColor = System.Drawing.Color.Black;
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtProdID.OnIdleState = stateProperties8;
-            this.txtProdID.Padding = new System.Windows.Forms.Padding(4);
+            this.txtProdID.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.txtProdID.PasswordChar = '\0';
             this.txtProdID.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtProdID.PlaceholderText = "";
@@ -218,7 +218,7 @@ namespace Gear_Store
             this.txtProdID.SelectionLength = 0;
             this.txtProdID.SelectionStart = 0;
             this.txtProdID.ShortcutsEnabled = true;
-            this.txtProdID.Size = new System.Drawing.Size(303, 40);
+            this.txtProdID.Size = new System.Drawing.Size(227, 32);
             this.txtProdID.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtProdID.TabIndex = 74;
             this.txtProdID.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -277,8 +277,7 @@ namespace Gear_Store
             this.btnDelBrand.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnDelBrand.IdleIconLeftImage")));
             this.btnDelBrand.IdleIconRightImage = null;
             this.btnDelBrand.IndicateFocus = false;
-            this.btnDelBrand.Location = new System.Drawing.Point(438, 71);
-            this.btnDelBrand.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDelBrand.Location = new System.Drawing.Point(328, 58);
             this.btnDelBrand.Name = "btnDelBrand";
             this.btnDelBrand.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnDelBrand.OnDisabledState.BorderRadius = 1;
@@ -302,7 +301,7 @@ namespace Gear_Store
             this.btnDelBrand.OnIdleState.BorderThickness = 1;
             this.btnDelBrand.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(67)))), ((int)(((byte)(78)))));
             this.btnDelBrand.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.btnDelBrand.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnDel.OnIdleState.IconLeftImage")));
+            this.btnDelBrand.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnDelBrand.OnIdleState.IconLeftImage")));
             this.btnDelBrand.OnIdleState.IconRightImage = null;
             this.btnDelBrand.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(83)))), ((int)(((byte)(96)))));
             this.btnDelBrand.OnPressedState.BorderRadius = 1;
@@ -312,7 +311,7 @@ namespace Gear_Store
             this.btnDelBrand.OnPressedState.ForeColor = System.Drawing.Color.Orange;
             this.btnDelBrand.OnPressedState.IconLeftImage = null;
             this.btnDelBrand.OnPressedState.IconRightImage = null;
-            this.btnDelBrand.Size = new System.Drawing.Size(59, 48);
+            this.btnDelBrand.Size = new System.Drawing.Size(44, 39);
             this.btnDelBrand.TabIndex = 18;
             this.btnDelBrand.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnDelBrand.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -368,8 +367,7 @@ namespace Gear_Store
             this.btnAddBrand.IdleIconLeftImage = global::Gear_Store.Properties.Resources.plus_math_48px;
             this.btnAddBrand.IdleIconRightImage = null;
             this.btnAddBrand.IndicateFocus = false;
-            this.btnAddBrand.Location = new System.Drawing.Point(371, 71);
-            this.btnAddBrand.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAddBrand.Location = new System.Drawing.Point(278, 58);
             this.btnAddBrand.Name = "btnAddBrand";
             this.btnAddBrand.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnAddBrand.OnDisabledState.BorderRadius = 1;
@@ -403,13 +401,14 @@ namespace Gear_Store
             this.btnAddBrand.OnPressedState.ForeColor = System.Drawing.Color.Orange;
             this.btnAddBrand.OnPressedState.IconLeftImage = null;
             this.btnAddBrand.OnPressedState.IconRightImage = null;
-            this.btnAddBrand.Size = new System.Drawing.Size(59, 48);
+            this.btnAddBrand.Size = new System.Drawing.Size(44, 39);
             this.btnAddBrand.TabIndex = 17;
             this.btnAddBrand.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAddBrand.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnAddBrand.TextMarginLeft = 0;
             this.btnAddBrand.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnAddBrand.UseDefaultRadiusAndThickness = true;
+            this.btnAddBrand.Click += new System.EventHandler(this.btnAddBrand_Click);
             // 
             // bunifuTextBox1
             // 
@@ -439,8 +438,7 @@ namespace Gear_Store
             this.bunifuTextBox1.IconRight = null;
             this.bunifuTextBox1.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBox1.Lines = new string[0];
-            this.bunifuTextBox1.Location = new System.Drawing.Point(554, 71);
-            this.bunifuTextBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuTextBox1.Location = new System.Drawing.Point(416, 58);
             this.bunifuTextBox1.MaxLength = 32767;
             this.bunifuTextBox1.MinimumSize = new System.Drawing.Size(1, 1);
             this.bunifuTextBox1.Modified = false;
@@ -466,7 +464,7 @@ namespace Gear_Store
             stateProperties4.ForeColor = System.Drawing.Color.Black;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.bunifuTextBox1.OnIdleState = stateProperties4;
-            this.bunifuTextBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.bunifuTextBox1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.bunifuTextBox1.PasswordChar = '\0';
             this.bunifuTextBox1.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.bunifuTextBox1.PlaceholderText = "";
@@ -476,7 +474,7 @@ namespace Gear_Store
             this.bunifuTextBox1.SelectionLength = 0;
             this.bunifuTextBox1.SelectionStart = 0;
             this.bunifuTextBox1.ShortcutsEnabled = true;
-            this.bunifuTextBox1.Size = new System.Drawing.Size(303, 40);
+            this.bunifuTextBox1.Size = new System.Drawing.Size(227, 32);
             this.bunifuTextBox1.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.bunifuTextBox1.TabIndex = 79;
             this.bunifuTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -535,8 +533,7 @@ namespace Gear_Store
             this.btnDelPCatg.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnDelPCatg.IdleIconLeftImage")));
             this.btnDelPCatg.IdleIconRightImage = null;
             this.btnDelPCatg.IndicateFocus = false;
-            this.btnDelPCatg.Location = new System.Drawing.Point(953, 71);
-            this.btnDelPCatg.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDelPCatg.Location = new System.Drawing.Point(715, 58);
             this.btnDelPCatg.Name = "btnDelPCatg";
             this.btnDelPCatg.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnDelPCatg.OnDisabledState.BorderRadius = 1;
@@ -560,7 +557,7 @@ namespace Gear_Store
             this.btnDelPCatg.OnIdleState.BorderThickness = 1;
             this.btnDelPCatg.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(67)))), ((int)(((byte)(78)))));
             this.btnDelPCatg.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.btnDelPCatg.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton1.OnIdleState.IconLeftImage")));
+            this.btnDelPCatg.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnDelPCatg.OnIdleState.IconLeftImage")));
             this.btnDelPCatg.OnIdleState.IconRightImage = null;
             this.btnDelPCatg.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(83)))), ((int)(((byte)(96)))));
             this.btnDelPCatg.OnPressedState.BorderRadius = 1;
@@ -570,7 +567,7 @@ namespace Gear_Store
             this.btnDelPCatg.OnPressedState.ForeColor = System.Drawing.Color.Orange;
             this.btnDelPCatg.OnPressedState.IconLeftImage = null;
             this.btnDelPCatg.OnPressedState.IconRightImage = null;
-            this.btnDelPCatg.Size = new System.Drawing.Size(59, 48);
+            this.btnDelPCatg.Size = new System.Drawing.Size(44, 39);
             this.btnDelPCatg.TabIndex = 78;
             this.btnDelPCatg.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnDelPCatg.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -626,8 +623,7 @@ namespace Gear_Store
             this.btnAddlPCatg.IdleIconLeftImage = global::Gear_Store.Properties.Resources.plus_math_48px;
             this.btnAddlPCatg.IdleIconRightImage = null;
             this.btnAddlPCatg.IndicateFocus = false;
-            this.btnAddlPCatg.Location = new System.Drawing.Point(886, 71);
-            this.btnAddlPCatg.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAddlPCatg.Location = new System.Drawing.Point(664, 58);
             this.btnAddlPCatg.Name = "btnAddlPCatg";
             this.btnAddlPCatg.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnAddlPCatg.OnDisabledState.BorderRadius = 1;
@@ -661,7 +657,7 @@ namespace Gear_Store
             this.btnAddlPCatg.OnPressedState.ForeColor = System.Drawing.Color.Orange;
             this.btnAddlPCatg.OnPressedState.IconLeftImage = null;
             this.btnAddlPCatg.OnPressedState.IconRightImage = null;
-            this.btnAddlPCatg.Size = new System.Drawing.Size(59, 48);
+            this.btnAddlPCatg.Size = new System.Drawing.Size(44, 39);
             this.btnAddlPCatg.TabIndex = 77;
             this.btnAddlPCatg.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAddlPCatg.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -719,12 +715,13 @@ namespace Gear_Store
             this.bunifuDataGridView2.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.bunifuDataGridView2.HeaderBgColor = System.Drawing.Color.Empty;
             this.bunifuDataGridView2.HeaderForeColor = System.Drawing.Color.White;
-            this.bunifuDataGridView2.Location = new System.Drawing.Point(554, 137);
+            this.bunifuDataGridView2.Location = new System.Drawing.Point(416, 111);
+            this.bunifuDataGridView2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bunifuDataGridView2.Name = "bunifuDataGridView2";
             this.bunifuDataGridView2.RowHeadersVisible = false;
             this.bunifuDataGridView2.RowTemplate.Height = 40;
             this.bunifuDataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.bunifuDataGridView2.Size = new System.Drawing.Size(458, 355);
+            this.bunifuDataGridView2.Size = new System.Drawing.Size(344, 288);
             this.bunifuDataGridView2.TabIndex = 76;
             this.bunifuDataGridView2.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
@@ -733,7 +730,8 @@ namespace Gear_Store
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(550, 46);
+            this.label1.Location = new System.Drawing.Point(412, 37);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(144, 21);
             this.label1.TabIndex = 80;
@@ -741,10 +739,10 @@ namespace Gear_Store
             // 
             // Form_Brand
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(42)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(1051, 531);
+            this.ClientSize = new System.Drawing.Size(788, 431);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.bunifuTextBox1);
             this.Controls.Add(this.btnDelPCatg);
@@ -757,6 +755,7 @@ namespace Gear_Store
             this.Controls.Add(this.btnAddBrand);
             this.Controls.Add(this.bunifuDataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form_Brand";
             this.Text = "Form_Brand";
             this.Load += new System.EventHandler(this.Form_Brand_Load);
