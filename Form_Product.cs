@@ -40,8 +40,7 @@ namespace Gear_Store
         #endregion
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            Form_ProductDetails frm = new Form_ProductDetails();
-            frm.Show();
+
 
         }
 
