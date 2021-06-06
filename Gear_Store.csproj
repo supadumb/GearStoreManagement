@@ -247,13 +247,7 @@
     <Compile Include="Product.cs">
       <DependentUpon>Model_GearStore.tt</DependentUpon>
     </Compile>
-    <Compile Include="SearchedBrand_Prod_Result.cs">
-      <DependentUpon>Model_GearStore.tt</DependentUpon>
-    </Compile>
     <Compile Include="SearchedBrand_Result.cs">
-      <DependentUpon>Model_GearStore.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SearchedCategory_Prod_Result.cs">
       <DependentUpon>Model_GearStore.tt</DependentUpon>
     </Compile>
     <Compile Include="SearchedCategory_Result.cs">
@@ -429,19 +423,19 @@
     <None Include="Resources\Thêm tiêu đề phụ1.png" />
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="Model_GearStore.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Model_GearStore.Context.cs</LastGenOutput>
       <DependentUpon>Model_GearStore.edmx</DependentUpon>
+      <LastGenOutput>Model_GearStore.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Model_GearStore.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model_GearStore.edmx</DependentUpon>
       <LastGenOutput>Model_GearStore.cs</LastGenOutput>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

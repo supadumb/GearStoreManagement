@@ -35,6 +35,26 @@ namespace Gear_Store
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<Staff> Staffs { get; set; }
     
+        [DbFunction("GearStoreEntities", "SearchedBrand")]
+        public virtual IQueryable<SearchedBrand_Result> SearchedBrand(string search_name)
+        {
+            var search_nameParameter = search_name != null ?
+                new ObjectParameter("search_name", search_name) :
+                new ObjectParameter("search_name", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<SearchedBrand_Result>("[GearStoreEntities].[SearchedBrand](@search_name)", search_nameParameter);
+        }
+    
+        [DbFunction("GearStoreEntities", "SearchedCategory")]
+        public virtual IQueryable<SearchedCategory_Result> SearchedCategory(string search_name)
+        {
+            var search_nameParameter = search_name != null ?
+                new ObjectParameter("search_name", search_name) :
+                new ObjectParameter("search_name", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<SearchedCategory_Result>("[GearStoreEntities].[SearchedCategory](@search_name)", search_nameParameter);
+        }
+    
         public virtual int DeleteBrand(string id)
         {
             var idParameter = id != null ?
@@ -441,46 +461,6 @@ namespace Gear_Store
                 new ObjectParameter("phone", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("UpdateStaff", idParameter, passParameter, users_nameParameter, birthdayParameter, addrParameter, salaryParameter, emailParameter, phoneParameter);
-        }
-    
-        [DbFunction("GearStoreEntities", "SearchedBrand")]
-        public virtual IQueryable<SearchedBrand_Result> SearchedBrand(string search_name)
-        {
-            var search_nameParameter = search_name != null ?
-                new ObjectParameter("search_name", search_name) :
-                new ObjectParameter("search_name", typeof(string));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<SearchedBrand_Result>("[GearStoreEntities].[SearchedBrand](@search_name)", search_nameParameter);
-        }
-    
-        [DbFunction("GearStoreEntities", "SearchedCategory")]
-        public virtual IQueryable<SearchedCategory_Result> SearchedCategory(string search_name)
-        {
-            var search_nameParameter = search_name != null ?
-                new ObjectParameter("search_name", search_name) :
-                new ObjectParameter("search_name", typeof(string));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<SearchedCategory_Result>("[GearStoreEntities].[SearchedCategory](@search_name)", search_nameParameter);
-        }
-    
-        [DbFunction("GearStoreEntities", "SearchedBrand_Prod")]
-        public virtual IQueryable<SearchedBrand_Prod_Result> SearchedBrand_Prod(string search_name)
-        {
-            var search_nameParameter = search_name != null ?
-                new ObjectParameter("search_name", search_name) :
-                new ObjectParameter("search_name", typeof(string));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<SearchedBrand_Prod_Result>("[GearStoreEntities].[SearchedBrand_Prod](@search_name)", search_nameParameter);
-        }
-    
-        [DbFunction("GearStoreEntities", "SearchedCategory_Prod")]
-        public virtual IQueryable<SearchedCategory_Prod_Result> SearchedCategory_Prod(string search_name)
-        {
-            var search_nameParameter = search_name != null ?
-                new ObjectParameter("search_name", search_name) :
-                new ObjectParameter("search_name", typeof(string));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<SearchedCategory_Prod_Result>("[GearStoreEntities].[SearchedCategory_Prod](@search_name)", search_nameParameter);
         }
     }
 }

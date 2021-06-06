@@ -268,8 +268,8 @@ namespace Gear_Store
                         MessageBox.Show("Please Choose Your Image Product!", "Notification");
                         throw new Exception();
                     }
-                    var brand_id = db.SearchedBrand_Prod(cbbBrandName.Text).Select(n => n.brand_id).Single();
-                    var category_id = db.SearchedCategory_Prod(cbbCategoryName.Text).Select(n => n.category_id).Single();
+                    var brand_id = db.SearchedBrand(cbbBrandName.Text).Select(n => n.brand_id).Single();
+                    var category_id = db.SearchedCategory(cbbCategoryName.Text).Select(n => n.category_id).Single();
                     byte[] img = null;
                     FileStream fs = new FileStream(url, FileMode.Open, FileAccess.Read);
                     BinaryReader br = new BinaryReader(fs);

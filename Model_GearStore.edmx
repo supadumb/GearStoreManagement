@@ -4,20 +4,20 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="GearStoreModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="GearStoreModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Brands">
           <Key>
             <PropertyRef Name="brand_id" />
           </Key>
           <Property Name="brand_id" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="brand_name" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="brand_name" Type="nvarchar" MaxLength="255" />
         </EntityType>
         <EntityType Name="Categories">
           <Key>
             <PropertyRef Name="category_id" />
           </Key>
           <Property Name="category_id" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="category_name" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="category_name" Type="nvarchar" MaxLength="255" />
         </EntityType>
         <EntityType Name="Customers">
           <Key>
@@ -81,7 +81,7 @@
           <Property Name="email" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="phone" Type="varchar" MaxLength="20" />
         </EntityType>
-        <Association Name="FK__Order_Ite__order__35BCFE0A">
+        <Association Name="FK__Order_Ite__order__37A5467C">
           <End Role="Orders" Type="Self.Orders" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
@@ -95,7 +95,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Order_Ite__produ__36B12243">
+        <Association Name="FK__Order_Ite__produ__38996AB5">
           <End Role="Products" Type="Self.Products" Multiplicity="1" />
           <End Role="Order_Items" Type="Self.Order_Items" Multiplicity="*" />
           <ReferentialConstraint>
@@ -133,7 +133,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Products__brand___31EC6D26">
+        <Association Name="FK__Products__brand___33D4B598">
           <End Role="Brands" Type="Self.Brands" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
@@ -147,7 +147,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Products__catego__30F848ED">
+        <Association Name="FK__Products__catego__32E0915F">
           <End Role="Categories" Type="Self.Categories" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
@@ -231,24 +231,24 @@
           <Parameter Name="email" Type="varchar" Mode="In" />
           <Parameter Name="phone" Type="varchar" Mode="In" />
         </Function>
-        <Function Name="SearchedBrand_Prod" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+        <Function Name="SearchedBrand" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="search_name" Type="nvarchar" Mode="In" />
           <ReturnType>
             <CollectionType>
               <RowType>
                 <Property Name="brand_id" Type="varchar" MaxLength="100" Nullable="false" />
-                <Property Name="brand_name" Type="nvarchar" MaxLength="255" Nullable="false" />
+                <Property Name="brand_name" Type="nvarchar" MaxLength="255" />
               </RowType>
             </CollectionType>
           </ReturnType>
         </Function>
-        <Function Name="SearchedCategory_Prod" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+        <Function Name="SearchedCategory" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="search_name" Type="nvarchar" Mode="In" />
           <ReturnType>
             <CollectionType>
               <RowType>
                 <Property Name="category_id" Type="varchar" MaxLength="100" Nullable="false" />
-                <Property Name="category_name" Type="nvarchar" MaxLength="255" Nullable="false" />
+                <Property Name="category_name" Type="nvarchar" MaxLength="255" />
               </RowType>
             </CollectionType>
           </ReturnType>
@@ -308,11 +308,11 @@
           <EntitySet Name="Orders" EntityType="Self.Orders" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Staffs" EntityType="Self.Staffs" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__Order_Ite__order__35BCFE0A" Association="Self.FK__Order_Ite__order__35BCFE0A">
+          <AssociationSet Name="FK__Order_Ite__order__37A5467C" Association="Self.FK__Order_Ite__order__37A5467C">
             <End Role="Orders" EntitySet="Orders" />
             <End Role="Order_Items" EntitySet="Order_Items" />
           </AssociationSet>
-          <AssociationSet Name="FK__Order_Ite__produ__36B12243" Association="Self.FK__Order_Ite__produ__36B12243">
+          <AssociationSet Name="FK__Order_Ite__produ__38996AB5" Association="Self.FK__Order_Ite__produ__38996AB5">
             <End Role="Products" EntitySet="Products" />
             <End Role="Order_Items" EntitySet="Order_Items" />
           </AssociationSet>
@@ -324,34 +324,43 @@
             <End Role="Staffs" EntitySet="Staffs" />
             <End Role="Orders" EntitySet="Orders" />
           </AssociationSet>
-          <AssociationSet Name="FK__Products__brand___31EC6D26" Association="Self.FK__Products__brand___31EC6D26">
+          <AssociationSet Name="FK__Products__brand___33D4B598" Association="Self.FK__Products__brand___33D4B598">
             <End Role="Brands" EntitySet="Brands" />
             <End Role="Products" EntitySet="Products" />
           </AssociationSet>
-          <AssociationSet Name="FK__Products__catego__30F848ED" Association="Self.FK__Products__catego__30F848ED">
+          <AssociationSet Name="FK__Products__catego__32E0915F" Association="Self.FK__Products__catego__32E0915F">
             <End Role="Categories" EntitySet="Categories" />
             <End Role="Products" EntitySet="Products" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="GearStoreModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <ComplexType Name="SearchedBrand_Result">
+          <Property Name="brand_id" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="brand_name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </ComplexType>
+        <ComplexType Name="SearchedCategory_Result">
+          <Property Name="category_id" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="category_name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </ComplexType>
         <EntityType Name="Brand">
           <Key>
             <PropertyRef Name="brand_id" />
           </Key>
           <Property Name="brand_id" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="brand_name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Products" Relationship="Self.FK__Products__brand___31EC6D26" FromRole="Brands" ToRole="Products" />
+          <Property Name="brand_name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Products" Relationship="Self.FK__Products__brand___33D4B598" FromRole="Brands" ToRole="Products" />
         </EntityType>
         <EntityType Name="Category">
           <Key>
             <PropertyRef Name="category_id" />
           </Key>
           <Property Name="category_id" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="category_name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Products" Relationship="Self.FK__Products__catego__30F848ED" FromRole="Categories" ToRole="Products" />
+          <Property Name="category_name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Products" Relationship="Self.FK__Products__catego__32E0915F" FromRole="Categories" ToRole="Products" />
         </EntityType>
         <EntityType Name="Customer">
           <Key>
@@ -377,8 +386,8 @@
           <Property Name="quantity" Type="Int32" Nullable="false" />
           <Property Name="price" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
           <Property Name="discount" Type="Decimal" Precision="4" Scale="2" Nullable="false" />
-          <NavigationProperty Name="Order" Relationship="Self.FK__Order_Ite__order__35BCFE0A" FromRole="Order_Items" ToRole="Orders" />
-          <NavigationProperty Name="Product" Relationship="Self.FK__Order_Ite__produ__36B12243" FromRole="Order_Items" ToRole="Products" />
+          <NavigationProperty Name="Order" Relationship="Self.FK__Order_Ite__order__37A5467C" FromRole="Order_Items" ToRole="Orders" />
+          <NavigationProperty Name="Product" Relationship="Self.FK__Order_Ite__produ__38996AB5" FromRole="Order_Items" ToRole="Products" />
         </EntityType>
         <EntityType Name="Order">
           <Key>
@@ -392,7 +401,7 @@
           <Property Name="total_amount" Type="Decimal" Precision="19" Scale="4" />
           <Property Name="staff_id" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Customer" Relationship="Self.FK__Orders__customer__29572725" FromRole="Orders" ToRole="Customers" />
-          <NavigationProperty Name="Order_Items" Relationship="Self.FK__Order_Ite__order__35BCFE0A" FromRole="Orders" ToRole="Order_Items" />
+          <NavigationProperty Name="Order_Items" Relationship="Self.FK__Order_Ite__order__37A5467C" FromRole="Orders" ToRole="Order_Items" />
           <NavigationProperty Name="Staff" Relationship="Self.FK__Orders__staff_id__2A4B4B5E" FromRole="Orders" ToRole="Staffs" />
         </EntityType>
         <EntityType Name="Product">
@@ -407,9 +416,9 @@
           <Property Name="status" Type="Int32" Nullable="false" />
           <Property Name="dpt" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="pro_image" Type="Binary" MaxLength="Max" FixedLength="false" />
-          <NavigationProperty Name="Brand" Relationship="Self.FK__Products__brand___31EC6D26" FromRole="Products" ToRole="Brands" />
-          <NavigationProperty Name="Category" Relationship="Self.FK__Products__catego__30F848ED" FromRole="Products" ToRole="Categories" />
-          <NavigationProperty Name="Order_Items" Relationship="Self.FK__Order_Ite__produ__36B12243" FromRole="Products" ToRole="Order_Items" />
+          <NavigationProperty Name="Brand" Relationship="Self.FK__Products__brand___33D4B598" FromRole="Products" ToRole="Brands" />
+          <NavigationProperty Name="Category" Relationship="Self.FK__Products__catego__32E0915F" FromRole="Products" ToRole="Categories" />
+          <NavigationProperty Name="Order_Items" Relationship="Self.FK__Order_Ite__produ__38996AB5" FromRole="Products" ToRole="Order_Items" />
         </EntityType>
         <EntityType Name="Staff">
           <Key>
@@ -425,7 +434,7 @@
           <Property Name="phone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Orders" Relationship="Self.FK__Orders__staff_id__2A4B4B5E" FromRole="Staffs" ToRole="Orders" />
         </EntityType>
-        <Association Name="FK__Products__brand___31EC6D26">
+        <Association Name="FK__Products__brand___33D4B598">
           <End Role="Brands" Type="Self.Brand" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
@@ -439,7 +448,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Products__catego__30F848ED">
+        <Association Name="FK__Products__catego__32E0915F">
           <End Role="Categories" Type="Self.Category" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
@@ -467,7 +476,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Order_Ite__order__35BCFE0A">
+        <Association Name="FK__Order_Ite__order__37A5467C">
           <End Role="Orders" Type="Self.Order" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
@@ -481,7 +490,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Order_Ite__produ__36B12243">
+        <Association Name="FK__Order_Ite__produ__38996AB5">
           <End Role="Products" Type="Self.Product" Multiplicity="1" />
           <End Role="Order_Items" Type="Self.Order_Items" Multiplicity="*" />
           <ReferentialConstraint>
@@ -513,11 +522,11 @@
           <EntitySet Name="Orders" EntityType="Self.Order" />
           <EntitySet Name="Products" EntityType="Self.Product" />
           <EntitySet Name="Staffs" EntityType="Self.Staff" />
-          <AssociationSet Name="FK__Products__brand___31EC6D26" Association="Self.FK__Products__brand___31EC6D26">
+          <AssociationSet Name="FK__Products__brand___33D4B598" Association="Self.FK__Products__brand___33D4B598">
             <End Role="Brands" EntitySet="Brands" />
             <End Role="Products" EntitySet="Products" />
           </AssociationSet>
-          <AssociationSet Name="FK__Products__catego__30F848ED" Association="Self.FK__Products__catego__30F848ED">
+          <AssociationSet Name="FK__Products__catego__32E0915F" Association="Self.FK__Products__catego__32E0915F">
             <End Role="Categories" EntitySet="Categories" />
             <End Role="Products" EntitySet="Products" />
           </AssociationSet>
@@ -525,11 +534,11 @@
             <End Role="Customers" EntitySet="Customers" />
             <End Role="Orders" EntitySet="Orders" />
           </AssociationSet>
-          <AssociationSet Name="FK__Order_Ite__order__35BCFE0A" Association="Self.FK__Order_Ite__order__35BCFE0A">
+          <AssociationSet Name="FK__Order_Ite__order__37A5467C" Association="Self.FK__Order_Ite__order__37A5467C">
             <End Role="Orders" EntitySet="Orders" />
             <End Role="Order_Items" EntitySet="Order_Items" />
           </AssociationSet>
-          <AssociationSet Name="FK__Order_Ite__produ__36B12243" Association="Self.FK__Order_Ite__produ__36B12243">
+          <AssociationSet Name="FK__Order_Ite__produ__38996AB5" Association="Self.FK__Order_Ite__produ__38996AB5">
             <End Role="Products" EntitySet="Products" />
             <End Role="Order_Items" EntitySet="Order_Items" />
           </AssociationSet>
@@ -537,27 +546,33 @@
             <End Role="Staffs" EntitySet="Staffs" />
             <End Role="Orders" EntitySet="Orders" />
           </AssociationSet>
+          <FunctionImport Name="SearchedBrand" IsComposable="true" ReturnType="Collection(GearStoreModel.SearchedBrand_Result)">
+            <Parameter Name="search_name" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SearchedCategory" IsComposable="true" ReturnType="Collection(GearStoreModel.SearchedCategory_Result)">
+            <Parameter Name="search_name" Mode="In" Type="String" />
+          </FunctionImport>
           <FunctionImport Name="DeleteBrand">
-          <Parameter Name="id" Mode="In" Type="String" />
+            <Parameter Name="id" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="DeleteCategory">
-          <Parameter Name="id" Mode="In" Type="String" />
+            <Parameter Name="id" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="DeleteCustomer">
-          <Parameter Name="id" Mode="In" Type="String" />
+            <Parameter Name="id" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="DeleteOrder">
-          <Parameter Name="orid" Mode="In" Type="String" />
+            <Parameter Name="orid" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="DeleteOrder_Item">
             <Parameter Name="orid" Mode="In" Type="String" />
             <Parameter Name="proid" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="DeleteProduct">
-          <Parameter Name="id" Mode="In" Type="String" />
+            <Parameter Name="id" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="DeleteStaff">
-          <Parameter Name="id" Mode="In" Type="String" />
+            <Parameter Name="id" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="Insert_Order">
             <Parameter Name="cus_id" Mode="In" Type="String" />
@@ -568,10 +583,10 @@
             <Parameter Name="staff_id" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="InsertBrand">
-          <Parameter Name="brname" Mode="In" Type="String" />
+            <Parameter Name="brname" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="InsertCategory">
-          <Parameter Name="catname" Mode="In" Type="String" />
+            <Parameter Name="catname" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="InsertCustomer">
             <Parameter Name="fname" Mode="In" Type="String" />
@@ -654,35 +669,7 @@
             <Parameter Name="email" Mode="In" Type="String" />
             <Parameter Name="phone" Mode="In" Type="String" />
           </FunctionImport>
-          <FunctionImport Name="SearchedBrand" IsComposable="true" ReturnType="Collection(GearStoreModel.SearchedBrand_Result)">
-          <Parameter Name="search_name" Mode="In" Type="String" />
-          </FunctionImport>
-          <FunctionImport Name="SearchedCategory" IsComposable="true" ReturnType="Collection(GearStoreModel.SearchedCategory_Result)">
-          <Parameter Name="search_name" Mode="In" Type="String" />
-          </FunctionImport>
-          <FunctionImport Name="SearchedBrand_Prod" IsComposable="true" ReturnType="Collection(GearStoreModel.SearchedBrand_Prod_Result)">
-            <Parameter Name="search_name" Mode="In" Type="String" />
-          </FunctionImport>
-          <FunctionImport Name="SearchedCategory_Prod" IsComposable="true" ReturnType="Collection(GearStoreModel.SearchedCategory_Prod_Result)">
-            <Parameter Name="search_name" Mode="In" Type="String" />
-          </FunctionImport>
         </EntityContainer>
-        <ComplexType Name="SearchedBrand_Result">
-          <Property Type="String" Name="brand_id" Nullable="false" MaxLength="100" />
-          <Property Type="String" Name="brand_name" Nullable="false" MaxLength="255" />
-        </ComplexType>
-        <ComplexType Name="SearchedCategory_Result">
-          <Property Type="String" Name="category_id" Nullable="false" MaxLength="100" />
-          <Property Type="String" Name="category_name" Nullable="false" MaxLength="255" />
-        </ComplexType>
-        <ComplexType Name="SearchedBrand_Prod_Result">
-          <Property Type="String" Name="brand_id" Nullable="false" MaxLength="100" />
-          <Property Type="String" Name="brand_name" Nullable="false" MaxLength="255" />
-        </ComplexType>
-        <ComplexType Name="SearchedCategory_Prod_Result">
-          <Property Type="String" Name="category_id" Nullable="false" MaxLength="100" />
-          <Property Type="String" Name="category_name" Nullable="false" MaxLength="255" />
-        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -771,6 +758,22 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionName="GearStoreModel.Store.SearchedBrand" FunctionImportName="SearchedBrand">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="GearStoreModel.SearchedBrand_Result">
+                <ScalarProperty Name="brand_id" ColumnName="brand_id" />
+                <ScalarProperty Name="brand_name" ColumnName="brand_name" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionName="GearStoreModel.Store.SearchedCategory" FunctionImportName="SearchedCategory">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="GearStoreModel.SearchedCategory_Result">
+                <ScalarProperty Name="category_id" ColumnName="category_id" />
+                <ScalarProperty Name="category_name" ColumnName="category_name" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="DeleteBrand" FunctionName="GearStoreModel.Store.DeleteBrand" />
           <FunctionImportMapping FunctionImportName="DeleteCategory" FunctionName="GearStoreModel.Store.DeleteCategory" />
           <FunctionImportMapping FunctionImportName="DeleteCustomer" FunctionName="GearStoreModel.Store.DeleteCustomer" />
@@ -791,23 +794,7 @@
           <FunctionImportMapping FunctionImportName="UpdateOrder" FunctionName="GearStoreModel.Store.UpdateOrder" />
           <FunctionImportMapping FunctionImportName="UpdateProduct" FunctionName="GearStoreModel.Store.UpdateProduct" />
           <FunctionImportMapping FunctionImportName="UpdateStaff" FunctionName="GearStoreModel.Store.UpdateStaff" />
-          <FunctionImportMapping FunctionImportName="SearchedBrand_Prod" FunctionName="GearStoreModel.Store.SearchedBrand_Prod">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="GearStoreModel.SearchedBrand_Prod_Result">
-                <ScalarProperty Name="brand_id" ColumnName="brand_id" />
-                <ScalarProperty Name="brand_name" ColumnName="brand_name" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="SearchedCategory_Prod" FunctionName="GearStoreModel.Store.SearchedCategory_Prod">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="GearStoreModel.SearchedCategory_Prod_Result">
-                <ScalarProperty Name="category_id" ColumnName="category_id" />
-                <ScalarProperty Name="category_name" ColumnName="category_name" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
-          </EntityContainerMapping>
+        </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
   </edmx:Runtime>
