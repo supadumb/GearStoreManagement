@@ -203,5 +203,6 @@ namespace Gear_Store
             else if (ornnow == 0) txtper_revenue.Text = "0%";
             else txtper_revenue.Text = "100%";
         }
+        
     }
 }

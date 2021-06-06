@@ -267,7 +267,6 @@
     <Compile Include="Supplier.cs">
       <DependentUpon>GearStoreModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="testbranch.cs" />
     <EmbeddedResource Include="Form_Brand.resx">
       <DependentUpon>Form_Brand.cs</DependentUpon>
     </EmbeddedResource>
