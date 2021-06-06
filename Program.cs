@@ -16,7 +16,7 @@ namespace Gear_Store
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form_Brand());
+            Application.Run(new Form_Menu());
         }
     }
 }

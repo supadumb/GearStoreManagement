@@ -51,7 +51,7 @@ namespace Gear_Store
 
         private void LoadProd()
         {
-            UCProduct[] listprod = new UCProduct[20];
+            UCProduct[] listprod = new UCProduct[5];
             for(int i=0; i < listprod.Length; i++)
             {
                 listprod[i] = new UCProduct();

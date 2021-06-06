@@ -1262,7 +1262,7 @@ namespace Gear_Store
             this.txtProductID.PasswordChar = '\0';
             this.txtProductID.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtProductID.PlaceholderText = "";
-            this.txtProductID.ReadOnly = false;
+            this.txtProductID.ReadOnly = true;
             this.txtProductID.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtProductID.SelectedText = "";
             this.txtProductID.SelectionLength = 0;
@@ -1465,7 +1465,7 @@ namespace Gear_Store
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(42)))), ((int)(((byte)(45)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(42)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(864, 619);
             this.Controls.Add(this.bunifuGroupBox4);
             this.Controls.Add(this.btnAddImage);

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="GearStoreModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="GearStoreModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Brands">
           <Key>
             <PropertyRef Name="brand_id" />
@@ -161,6 +161,12 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="Auto_IDBrand" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar" />
+        <Function Name="Auto_IDCat" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar" />
+        <Function Name="Auto_IDCus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar" />
+        <Function Name="Auto_IDOrd" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar" />
+        <Function Name="Auto_IDPro" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar" />
+        <Function Name="Auto_IDSta" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar" />
         <Function Name="DeleteBrand" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="id" Type="varchar" Mode="In" />
         </Function>
@@ -333,8 +339,7 @@
             <End Role="Products" EntitySet="Products" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="GearStoreModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -547,32 +552,32 @@
             <End Role="Orders" EntitySet="Orders" />
           </AssociationSet>
           <FunctionImport Name="SearchedBrand" IsComposable="true" ReturnType="Collection(GearStoreModel.SearchedBrand_Result)">
-            <Parameter Name="search_name" Mode="In" Type="String" />
+          <Parameter Name="search_name" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="SearchedCategory" IsComposable="true" ReturnType="Collection(GearStoreModel.SearchedCategory_Result)">
-            <Parameter Name="search_name" Mode="In" Type="String" />
+          <Parameter Name="search_name" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="DeleteBrand">
-            <Parameter Name="id" Mode="In" Type="String" />
+          <Parameter Name="id" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="DeleteCategory">
-            <Parameter Name="id" Mode="In" Type="String" />
+          <Parameter Name="id" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="DeleteCustomer">
-            <Parameter Name="id" Mode="In" Type="String" />
+          <Parameter Name="id" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="DeleteOrder">
-            <Parameter Name="orid" Mode="In" Type="String" />
+          <Parameter Name="orid" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="DeleteOrder_Item">
             <Parameter Name="orid" Mode="In" Type="String" />
             <Parameter Name="proid" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="DeleteProduct">
-            <Parameter Name="id" Mode="In" Type="String" />
+          <Parameter Name="id" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="DeleteStaff">
-            <Parameter Name="id" Mode="In" Type="String" />
+          <Parameter Name="id" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="Insert_Order">
             <Parameter Name="cus_id" Mode="In" Type="String" />
@@ -583,10 +588,10 @@
             <Parameter Name="staff_id" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="InsertBrand">
-            <Parameter Name="brname" Mode="In" Type="String" />
+          <Parameter Name="brname" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="InsertCategory">
-            <Parameter Name="catname" Mode="In" Type="String" />
+          <Parameter Name="catname" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="InsertCustomer">
             <Parameter Name="fname" Mode="In" Type="String" />

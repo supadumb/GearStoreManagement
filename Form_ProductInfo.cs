@@ -28,6 +28,7 @@ namespace Gear_Store
         {
             InitializeComponent();
         }
+
         #region Misc
         private void panelTopBar_MouseDown(object sender, MouseEventArgs e)
         {
@@ -143,6 +144,7 @@ namespace Gear_Store
 
 
         #endregion
+        
         private void Form_ProductInfo_Load(object sender, EventArgs e)
         {
 
@@ -156,11 +158,11 @@ namespace Gear_Store
             ResetButton();
         }
         void LoadAutoID() {
-            SqlConnection conn = new SqlConnection(@"Data Source=localhost;Initial Catalog=ThuCung;Integrated Security=True");
+            SqlConnection conn = new SqlConnection(@"Data Source=localhost;Initial Catalog=GearStore;Integrated Security=True");
             if (conn.State == ConnectionState.Open)
                 conn.Close();
             conn.Open();
-            SqlCommand cmd = new SqlCommand("SELECT dbo.Auto_IDPeCa()", conn);
+            SqlCommand cmd = new SqlCommand("SELECT dbo.Auto_IDPro()", conn);
             string result = Convert.ToString(cmd.ExecuteScalar());
             txtProductID.Text = result.Trim();
             conn.Close();
@@ -184,7 +186,6 @@ namespace Gear_Store
             txtDpt.ResetText();
             txtQuantity.ResetText();
             txtProductName.ResetText();
-            txtProductID.ResetText();
             txtModelYear.ResetText();
             txtPrice.ResetText();
             cbbBrandName.ResetText();

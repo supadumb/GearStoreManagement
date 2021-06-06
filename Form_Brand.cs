@@ -39,23 +39,18 @@ namespace Gear_Store
                 errorProvider.SetError(txtBrandName, null);
                 temp = true;
             }
-            var Brand = db.SearchedBrand(txtBrandName.Text).Select(n => n.brand_name).Count();
-            int count = int.Parse(Brand.ToString());
-            if (count != 0)
+            try
             {
-                txtBrandName.Focus();
-                errorProvider.SetError(txtCategoryName, "Brand name has already exited!");
+                if (temp)
+                {
+                    db.InsertBrand(txtBrandName.Text);
+                    LoadData();
+                    ResetTextBox();
+                }
             }
-            else
+            catch (Exception)
             {
-                errorProvider.SetError(txtCategoryName, null);
-                temp = true;
-            }
-            if (temp)
-            {
-                db.InsertBrand(txtBrandName.Text);
-                LoadData();
-                ResetTextBox();
+                errorProvider.SetError(txtBrandName, "Brand name has already exited!");
             }
         }
 
@@ -110,24 +105,18 @@ namespace Gear_Store
                 temp = true;
             }
 
-            
-            var Category = db.SearchedCategory(txtCategoryName.Text).Select(n => n.category_name).Single();
-            int count = int.Parse(Category.ToString());
-            if (count != 0)
+            try
             {
-                txtBrandName.Focus();
+                if (temp)
+                {
+                    db.InsertCategory(txtCategoryName.Text);
+                    LoadData();
+                    ResetTextBox();
+                }
+            }
+            catch (Exception)
+            {
                 errorProvider.SetError(txtCategoryName, "Category Name has already exited!");
-            }
-            else
-            {
-                errorProvider.SetError(txtCategoryName, null);
-                temp = true;
-            }
-            if (temp)
-            {
-                db.InsertCategory(txtCategoryName.Text);
-                LoadData();
-                ResetTextBox();
             }
         }
 
