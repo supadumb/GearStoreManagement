@@ -16,31 +16,45 @@ namespace Gear_Store
         {
             InitializeComponent();
         }
-
-        public void LoadData()
+        GearStoreEntities db = new GearStoreEntities();
+         public void LoadData()
         {
-
+            var data = db.Customers.Select(n => new
+            {
+                ID = n.customer_id,
+                FirstName = n.first_name,
+                LastName = n.last_name,
+                Phone = n.phone,
+                Email = n.email,
+                Street = n.street,
+                City = n.city,
+                State = n.state
+            });
+            dgv.DataSource = data.ToList();
         }
-
+        void MySet()
+        {
+            LoadData();
+        }
         #region Misc
         private void btnDel_MouseHover(object sender, EventArgs e)
         {
-            btnDel.IdleIconLeftImage = Gear_Store.Properties.Resources.Orange_trash_can_48px;
+            btndelete.IdleIconLeftImage = Gear_Store.Properties.Resources.Orange_trash_can_48px;
         }
 
         private void btnPrint_MouseHover(object sender, EventArgs e)
         {
-            btnPrint.IdleIconLeftImage = Gear_Store.Properties.Resources.Orange_print_48px;
+            btnprint.IdleIconLeftImage = Gear_Store.Properties.Resources.Orange_print_48px;
         }
 
         private void btnAdd_MouseHover(object sender, EventArgs e)
         {
-            btnAdd.IdleIconLeftImage = Gear_Store.Properties.Resources.Orange_plus_math_48px;
+            btnadd.IdleIconLeftImage = Gear_Store.Properties.Resources.Orange_plus_math_48px;
         }
 
         private void btnReload_MouseHover(object sender, EventArgs e)
         {
-            btnReload.IdleIconLeftImage = Gear_Store.Properties.Resources.Orange_reboot_48px;
+            btnload.IdleIconLeftImage = Gear_Store.Properties.Resources.Orange_reboot_48px;
         }
 
         #endregion
@@ -51,7 +65,7 @@ namespace Gear_Store
             {
                 using (Form_CustomerDetails frm_cusD = new Form_CustomerDetails())
                 {
-                    frm_cusD.mode = "New Customer";
+                    frm_cusD.mode = "New";
                     frm_cusD.ShowDialog();
                 }
             }
@@ -80,7 +94,7 @@ namespace Gear_Store
                 {
                     using (Form_CustomerDetails frm_cusD = new Form_CustomerDetails())
                     {
-                        frm_cusD.mode = "Edit Customer";
+                        frm_cusD.mode = "Edit";
                         frm_cusD.ShowDialog();
                     }
                 }
@@ -102,6 +116,19 @@ namespace Gear_Store
                 //code
             } 
                 
+        }
+
+
+
+        private void btnload_Click(object sender, EventArgs e)
+        {
+            LoadData();
+            txtsearch.ResetText();
+        }
+
+        private void Form_Customer_Load(object sender, EventArgs e)
+        {
+            MySet();
         }
     }
 }

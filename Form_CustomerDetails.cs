@@ -14,6 +14,7 @@ namespace Gear_Store
     public partial class Form_CustomerDetails : Form
     {
         public string mode;
+
         bool mouseDown = false;
         private Point offset;
 
@@ -21,8 +22,6 @@ namespace Gear_Store
         {
             InitializeComponent();
         }
-
-
         #region Misc
         private void panelTopBar_MouseDown(object sender, MouseEventArgs e)
         {
@@ -122,7 +121,24 @@ namespace Gear_Store
         }
         #endregion
 
-       
+        GearStoreEntities db = new GearStoreEntities();
+        public void ResetAllText()
+        {
+            txtCustomerID.ResetText();
+            txtFName.ResetText();
+            txtLName.ResetText();
+            txtPhone.ResetText();
+            txtEmail.ResetText();
+            txtState.ResetText();
+            txtStreet.ResetText();
+            txtState.ResetText();
+            txtCity.ResetText();
+        }
+
+        public void Load()
+        {
+
+        }
         private void txtemail_TextChanged(object sender, EventArgs e)
         {
             if (txtEmail.Text.Length != 0)
@@ -166,12 +182,24 @@ namespace Gear_Store
 
         private void Form_CustomerDetails_Load(object sender, EventArgs e)
         {
-            bunifuLabel2.Text = mode;
+
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnsave_Click(object sender, EventArgs e)
+        {
+            if (mode=="New")
+            {
+                db.InsertCustomer(txtFName.Text, txtLName.Text, txtPhone.Text, txtEmail.Text, txtStreet.Text, txtCity.Text, txtState.Text);
+            }
+            else
+            {
+                db.UpdateCustomer(txtCustomerID.Text, txtFName.Text, txtLName.Text, txtPhone.Text, txtEmail.Text, txtStreet.Text, txtCity.Text, txtState.Text);
+            }
         }
     }
 }

@@ -42,11 +42,6 @@ namespace Gear_Store
             this.btn_Quit = new System.Windows.Forms.Button();
             this.panel_Wrapper = new Bunifu.UI.WinForms.BunifuPanel();
             this.page = new Bunifu.UI.WinForms.BunifuPages();
-            this.pDashboard = new System.Windows.Forms.TabPage();
-            this.pProduct = new System.Windows.Forms.TabPage();
-            this.pOrder = new System.Windows.Forms.TabPage();
-            this.pCustomer = new System.Windows.Forms.TabPage();
-            this.pEmployee = new System.Windows.Forms.TabPage();
             this.panelNavigation = new Bunifu.UI.WinForms.BunifuPanel();
             this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.btnEmployee = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -54,6 +49,11 @@ namespace Gear_Store
             this.btnOrder = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnProduct = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnDashBoard = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.pDashboard = new System.Windows.Forms.TabPage();
+            this.pProduct = new System.Windows.Forms.TabPage();
+            this.pOrder = new System.Windows.Forms.TabPage();
+            this.pCustomer = new System.Windows.Forms.TabPage();
+            this.pStaff = new System.Windows.Forms.TabPage();
             this.panelTopBar.SuspendLayout();
             this.panel_Wrapper.SuspendLayout();
             this.page.SuspendLayout();
@@ -138,18 +138,17 @@ namespace Gear_Store
             this.page.Controls.Add(this.pProduct);
             this.page.Controls.Add(this.pOrder);
             this.page.Controls.Add(this.pCustomer);
-            this.page.Controls.Add(this.pEmployee);
-            this.page.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.page.Controls.Add(this.pStaff);
             this.page.Location = new System.Drawing.Point(0, 0);
             this.page.Multiline = true;
             this.page.Name = "page";
-            this.page.Page = this.pDashboard;
-            this.page.PageIndex = 0;
-            this.page.PageName = "pDashboard";
-            this.page.PageTitle = "Dashboard";
+            this.page.Page = this.pStaff;
+            this.page.PageIndex = 4;
+            this.page.PageName = "pStaff";
+            this.page.PageTitle = "Staff";
             this.page.SelectedIndex = 0;
             this.page.Size = new System.Drawing.Size(1240, 621);
-            this.page.TabIndex = 0;
+            this.page.TabIndex = 2;
             animation1.AnimateOnlyDifferences = true;
             animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
             animation1.LeafCoeff = 0F;
@@ -166,57 +165,7 @@ namespace Gear_Store
             animation1.TimeCoeff = 0F;
             animation1.TransparencyCoeff = 0F;
             this.page.Transition = animation1;
-            this.page.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.ScaleAndHorizSlide;
-            // 
-            // pDashboard
-            // 
-            this.pDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(40)))), ((int)(((byte)(46)))));
-            this.pDashboard.Location = new System.Drawing.Point(4, 4);
-            this.pDashboard.Name = "pDashboard";
-            this.pDashboard.Padding = new System.Windows.Forms.Padding(3);
-            this.pDashboard.Size = new System.Drawing.Size(1232, 595);
-            this.pDashboard.TabIndex = 0;
-            this.pDashboard.Text = "Dashboard";
-            // 
-            // pProduct
-            // 
-            this.pProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(40)))), ((int)(((byte)(46)))));
-            this.pProduct.Location = new System.Drawing.Point(4, 4);
-            this.pProduct.Name = "pProduct";
-            this.pProduct.Padding = new System.Windows.Forms.Padding(3);
-            this.pProduct.Size = new System.Drawing.Size(1192, 595);
-            this.pProduct.TabIndex = 1;
-            this.pProduct.Text = "Product";
-            // 
-            // pOrder
-            // 
-            this.pOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(40)))), ((int)(((byte)(46)))));
-            this.pOrder.Location = new System.Drawing.Point(4, 4);
-            this.pOrder.Name = "pOrder";
-            this.pOrder.Padding = new System.Windows.Forms.Padding(3);
-            this.pOrder.Size = new System.Drawing.Size(1192, 595);
-            this.pOrder.TabIndex = 2;
-            this.pOrder.Text = "Order";
-            // 
-            // pCustomer
-            // 
-            this.pCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(40)))), ((int)(((byte)(46)))));
-            this.pCustomer.Location = new System.Drawing.Point(4, 4);
-            this.pCustomer.Name = "pCustomer";
-            this.pCustomer.Padding = new System.Windows.Forms.Padding(3);
-            this.pCustomer.Size = new System.Drawing.Size(1192, 595);
-            this.pCustomer.TabIndex = 3;
-            this.pCustomer.Text = "Customer";
-            // 
-            // pEmployee
-            // 
-            this.pEmployee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(40)))), ((int)(((byte)(46)))));
-            this.pEmployee.Location = new System.Drawing.Point(4, 4);
-            this.pEmployee.Name = "pEmployee";
-            this.pEmployee.Padding = new System.Windows.Forms.Padding(3);
-            this.pEmployee.Size = new System.Drawing.Size(1192, 595);
-            this.pEmployee.TabIndex = 4;
-            this.pEmployee.Text = "Employee";
+            this.page.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.Custom;
             // 
             // panelNavigation
             // 
@@ -705,6 +654,57 @@ namespace Gear_Store
             this.btnDashBoard.Click += new System.EventHandler(this.btnDashBoard_Click);
             this.btnDashBoard.MouseHover += new System.EventHandler(this.btnDashBoard_MouseHover);
             // 
+            // pDashboard
+            // 
+            this.pDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(40)))), ((int)(((byte)(46)))));
+            this.pDashboard.Location = new System.Drawing.Point(4, 4);
+            this.pDashboard.Name = "pDashboard";
+            this.pDashboard.Padding = new System.Windows.Forms.Padding(3);
+            this.pDashboard.Size = new System.Drawing.Size(1232, 595);
+            this.pDashboard.TabIndex = 0;
+            this.pDashboard.Text = "Dashboard";
+            // 
+            // pProduct
+            // 
+            this.pProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(40)))), ((int)(((byte)(46)))));
+            this.pProduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(40)))), ((int)(((byte)(46)))));
+            this.pProduct.Location = new System.Drawing.Point(4, 4);
+            this.pProduct.Name = "pProduct";
+            this.pProduct.Padding = new System.Windows.Forms.Padding(3);
+            this.pProduct.Size = new System.Drawing.Size(1232, 595);
+            this.pProduct.TabIndex = 1;
+            this.pProduct.Text = "Product";
+            // 
+            // pOrder
+            // 
+            this.pOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(40)))), ((int)(((byte)(46)))));
+            this.pOrder.Location = new System.Drawing.Point(4, 4);
+            this.pOrder.Name = "pOrder";
+            this.pOrder.Padding = new System.Windows.Forms.Padding(3);
+            this.pOrder.Size = new System.Drawing.Size(1232, 595);
+            this.pOrder.TabIndex = 2;
+            this.pOrder.Text = "Order";
+            // 
+            // pCustomer
+            // 
+            this.pCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(40)))), ((int)(((byte)(46)))));
+            this.pCustomer.Location = new System.Drawing.Point(4, 4);
+            this.pCustomer.Name = "pCustomer";
+            this.pCustomer.Padding = new System.Windows.Forms.Padding(3);
+            this.pCustomer.Size = new System.Drawing.Size(1232, 595);
+            this.pCustomer.TabIndex = 3;
+            this.pCustomer.Text = "Customer";
+            // 
+            // pStaff
+            // 
+            this.pStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(40)))), ((int)(((byte)(46)))));
+            this.pStaff.Location = new System.Drawing.Point(4, 4);
+            this.pStaff.Name = "pStaff";
+            this.pStaff.Padding = new System.Windows.Forms.Padding(3);
+            this.pStaff.Size = new System.Drawing.Size(1232, 595);
+            this.pStaff.TabIndex = 4;
+            this.pStaff.Text = "Staff";
+            // 
             // Form_Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -736,17 +736,17 @@ namespace Gear_Store
         private Bunifu.UI.WinForms.BunifuPanel panelNavigation;
         private Bunifu.UI.WinForms.BunifuPanel panel_Wrapper;
         private Bunifu.UI.WinForms.BunifuPages page;
-        private System.Windows.Forms.TabPage pDashboard;
-        private System.Windows.Forms.TabPage pProduct;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnDashBoard;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnCustomer;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnOrder;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnProduct;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnEmployee;
+        private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator1;
+        private System.Windows.Forms.TabPage pDashboard;
+        private System.Windows.Forms.TabPage pProduct;
         private System.Windows.Forms.TabPage pOrder;
         private System.Windows.Forms.TabPage pCustomer;
-        private System.Windows.Forms.TabPage pEmployee;
-        private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator1;
+        private System.Windows.Forms.TabPage pStaff;
     }
 }
 

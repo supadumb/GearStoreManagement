@@ -223,6 +223,18 @@
     <Compile Include="Form_ProductInfo.Designer.cs">
       <DependentUpon>Form_ProductInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_Staff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Staff.Designer.cs">
+      <DependentUpon>Form_Staff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_StaffDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_StaffDetails.Designer.cs">
+      <DependentUpon>Form_StaffDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="GearStoreModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -281,6 +293,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_ProductInfo.resx">
       <DependentUpon>Form_ProductInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Staff.resx">
+      <DependentUpon>Form_Staff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_StaffDetails.resx">
+      <DependentUpon>Form_StaffDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCProduct.resx">
       <DependentUpon>UCProduct.cs</DependentUpon>

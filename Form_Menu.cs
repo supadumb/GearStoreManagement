@@ -20,6 +20,7 @@ namespace Gear_Store
         Form_Customer frm_cus;
         Form_Product frm_pro;
         Form_Dashboard frm_dash;
+        Form_Staff frm_staff;
         public Form_Menu()
         {
             InitializeComponent();
@@ -70,7 +71,7 @@ namespace Gear_Store
         }
         #endregion
 
-
+        GearStoreEntities db = new GearStoreEntities();
 
         void loadFrom()
         {
@@ -99,7 +100,14 @@ namespace Gear_Store
                 FormBorderStyle = FormBorderStyle.None
             };
             pDashboard.Controls.Add(frm_dash);
-
+            frm_staff = new Form_Staff()
+            {
+                Dock = DockStyle.Fill,
+                TopLevel = false,
+                TopMost = true,
+                FormBorderStyle = FormBorderStyle.None
+            };
+            pStaff.Controls.Add(frm_staff);
         }
         private void Form_Menu_Load(object sender, EventArgs e)
         {
@@ -113,19 +121,7 @@ namespace Gear_Store
             frm_dash.Show();
         }
 
-        private void btnCustomer_Click(object sender, EventArgs e)
-        {
-            page.SetPage(3);
-            frm_cus.Refresh();
 
-            //btnCustomer.ForeColor = Color.Orange;
-            //btnDashBoard.ForeColor = Color.White;
-            //btnProduct.ForeColor = Color.White;
-            //btnOrder.ForeColor = Color.White;
-            //btnEmployee.ForeColor = Color.White;
-
-            frm_cus.Show();
-        }
 
         private void btnProduct_Click(object sender, EventArgs e)
         {
@@ -141,13 +137,22 @@ namespace Gear_Store
 
         private void btnEmployee_Click(object sender, EventArgs e)
         {
-
+            page.SetPage(4);
+            frm_staff.Refresh();
+            frm_staff.Show();
         }
 
         private void btnDashBoard_MouseHover(object sender, EventArgs e)
         {
             btnDashBoard.ForeColor = Color.Orange;
             btnDashBoard.IdleIconLeftImage = Gear_Store.Properties.Resources.Orange_home_48px;
+        }
+
+        private void btnCustomer_Click(object sender, EventArgs e)
+        {
+            page.SetPage(3);
+            frm_cus.Refresh();
+            frm_cus.Show();
         }
 
     }

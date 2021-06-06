@@ -50,15 +50,14 @@ namespace Gear_Store
         private void LoadProd()
         {
             UCProduct[] listprod = new UCProduct[20];
-            for(int i=0; i < listprod.Length; i++)
-            {
-                listprod[i] = new UCProduct();
-                listprod[i].Title = "Test HERE!!!";
-                listprod[i].Price = "1000000000$";
+            //for (int i = 0; i < listprod.Length; i++)
+            //{
+            //    listprod[i] = new UCProduct();
+            //    listprod[i].Title = "Test HERE!!!";
+            //    listprod[i].Price = "1000000000$";
 
-                flowtabOther.Controls.Add(listprod[i]);
-                
-            }
+            //    flowtabOther.Controls.Add(listprod[i]);
+            //}
         }
         #endregion
 
