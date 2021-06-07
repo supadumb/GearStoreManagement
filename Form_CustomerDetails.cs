@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,16 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using System.Data.SqlClient;
 
 namespace Gear_Store
 {
     public partial class Form_CustomerDetails : Form
     {
         public string mode;
-
+        public string[] data= {"","","","","","","","" };
         bool mouseDown = false;
         private Point offset;
-
+        bool yes = true;
         public Form_CustomerDetails()
         {
             InitializeComponent();
@@ -134,10 +135,32 @@ namespace Gear_Store
             txtState.ResetText();
             txtCity.ResetText();
         }
-
-        public void Load()
+        public void AutoID()
         {
-
+            SqlConnection conn = new SqlConnection(@"Data Source=localhost;Initial Catalog=GearStore;Integrated Security=True");
+            if (conn.State == ConnectionState.Open)
+                conn.Close();
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("SELECT dbo.Auto_IDCus()", conn);
+            string result = Convert.ToString(cmd.ExecuteScalar());
+            txtCustomerID.Text = result.Trim();
+            conn.Close();
+        }
+         void LoadData()
+        {
+            ResetAllText();
+            AutoID();
+            if (mode=="Edit")
+            {
+                txtCustomerID.Text = data[0];
+                txtFName.Text = data[1];
+                txtLName.Text = data[2];
+                txtPhone.Text = data[3];
+                txtEmail.Text = data[4];
+                txtStreet.Text = data[5];
+                txtCity.Text = data[6];
+                txtState.Text = data[7];
+            }
         }
         private void txtemail_TextChanged(object sender, EventArgs e)
         {
@@ -146,7 +169,9 @@ namespace Gear_Store
                 if (IsValidEmail(txtEmail.Text))
                     txtEmail.IconRight = Gear_Store.Properties.Resources._checked;
                 else
+                {
                     txtEmail.IconRight = Gear_Store.Properties.Resources.cancel;
+                }
             }
             else
             {
@@ -161,7 +186,9 @@ namespace Gear_Store
                 if (IsValidPhoneNumber(txtPhone.Text))
                     txtPhone.IconRight = Gear_Store.Properties.Resources._checked;
                 else
+                {
                     txtPhone.IconRight = Gear_Store.Properties.Resources.cancel;
+                }
             }
             else
             {
@@ -180,26 +207,66 @@ namespace Gear_Store
             txtColorChange_Leave(sender, e);
         }
 
-        private void Form_CustomerDetails_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
 
+        }
+        void Check()
+        {
+            if (txtFName.Text.Trim() == "")
+            {
+                snackbarcomplete.Show(this, "Please enter your name!!!", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Warning);
+                txtFName.Focus();
+                yes = false;
+            }
+            if (txtLName.Text.Trim() == "")
+            {
+                snackbarcomplete.Show(this, "Please enter your name!!!", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Warning);
+                txtLName.Focus();
+                yes = false;
+            }
+            if (txtEmail.Text.Trim() == "")
+            {
+                snackbarcomplete.Show(this, "Please enter your email!!!", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Warning);
+                txtLName.Focus();
+                yes = false;
+            }
+            if (!IsValidPhoneNumber(txtPhone.Text)) yes = false;
+            if (!IsValidEmail(txtEmail.Text)) yes = false;
+        }
         private void btnsave_Click(object sender, EventArgs e)
         {
-            if (mode=="New")
+            Check();
+            if (yes)
             {
-                db.InsertCustomer(txtFName.Text, txtLName.Text, txtPhone.Text, txtEmail.Text, txtStreet.Text, txtCity.Text, txtState.Text);
+                try
+                {
+                    if (mode == "New")
+                    {
+
+                        db.InsertCustomer(txtFName.Text, txtLName.Text, txtPhone.Text, txtEmail.Text, txtStreet.Text, txtCity.Text, txtState.Text);
+                        snackbarcomplete.Show(this, "Customer successfully added", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success);
+                        LoadData();
+                    }
+                    else
+                    {
+                        db.UpdateCustomer(txtCustomerID.Text, txtFName.Text, txtLName.Text, txtPhone.Text, txtEmail.Text, txtStreet.Text, txtCity.Text, txtState.Text);
+                        snackbarcomplete.Show(this, "Customer successfully edited", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success);
+                    }
+                }
+                catch (Exception)
+                {
+                    snackbarcomplete.Show(this, "Error!!!", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
+                }
             }
-            else
-            {
-                db.UpdateCustomer(txtCustomerID.Text, txtFName.Text, txtLName.Text, txtPhone.Text, txtEmail.Text, txtStreet.Text, txtCity.Text, txtState.Text);
-            }
+            else snackbarcomplete.Show(this, "Please enter correct", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
+            yes = true;
+        }
+
+        private void Form_CustomerDetails_Load_1(object sender, EventArgs e)
+        {
+            LoadData();
         }
     }
 }
